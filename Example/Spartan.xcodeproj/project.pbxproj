@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C1261F31E2C54A1000827C7 /* SpartanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1261F21E2C54A1000827C7 /* SpartanTests.swift */; };
+		5C1261FA1E2C54AE000827C7 /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCA1E2C3E6700F87FC4 /* Spartan.swift */; };
+		5C1261FB1E2C54AE000827C7 /* SpartanAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCB1E2C3E6700F87FC4 /* SpartanAlbum.swift */; };
+		5C1261FC1E2C54AE000827C7 /* SpartanCopyrightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift */; };
+		5C1261FD1E2C54AE000827C7 /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCD1E2C3E6700F87FC4 /* SpartanError.swift */; };
+		5C1261FE1E2C54AE000827C7 /* SpartanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCE1E2C3E6700F87FC4 /* SpartanImage.swift */; };
+		5C1261FF1E2C54AE000827C7 /* SpartanLinkedTrackObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift */; };
+		5C1262001E2C54AE000827C7 /* SpartanObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD01E2C3E6700F87FC4 /* SpartanObject.swift */; };
+		5C1262011E2C54AE000827C7 /* SpartanPagingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD11E2C3E6700F87FC4 /* SpartanPagingObject.swift */; };
+		5C1262021E2C54AE000827C7 /* SpartanRequestAdapater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift */; };
+		5C1262031E2C54AE000827C7 /* SpartanRequestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD31E2C3E6700F87FC4 /* SpartanRequestLogger.swift */; };
+		5C1262041E2C54AE000827C7 /* SpartanRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD41E2C3E6700F87FC4 /* SpartanRequestManager.swift */; };
+		5C1262051E2C54AE000827C7 /* SpartanSimplifiedAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift */; };
+		5C1262061E2C54AE000827C7 /* SpartanSimplifiedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift */; };
+		5C1262071E2C54AE000827C7 /* SpartanSimplifiedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift */; };
+		5C1262081E2C54AE000827C7 /* SpartanTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD81E2C3E6700F87FC4 /* SpartanTrack.swift */; };
+		5C1262091E2C54AE000827C7 /* SpartanURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD91E2C3E6700F87FC4 /* SpartanURL.swift */; };
+		5C2E5DDA1E2C3E6700F87FC4 /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCA1E2C3E6700F87FC4 /* Spartan.swift */; };
+		5C2E5DDB1E2C3E6700F87FC4 /* SpartanAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCB1E2C3E6700F87FC4 /* SpartanAlbum.swift */; };
+		5C2E5DDC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift */; };
+		5C2E5DDD1E2C3E6700F87FC4 /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCD1E2C3E6700F87FC4 /* SpartanError.swift */; };
+		5C2E5DDE1E2C3E6700F87FC4 /* SpartanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCE1E2C3E6700F87FC4 /* SpartanImage.swift */; };
+		5C2E5DDF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift */; };
+		5C2E5DE01E2C3E6700F87FC4 /* SpartanObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD01E2C3E6700F87FC4 /* SpartanObject.swift */; };
+		5C2E5DE11E2C3E6700F87FC4 /* SpartanPagingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD11E2C3E6700F87FC4 /* SpartanPagingObject.swift */; };
+		5C2E5DE21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift */; };
+		5C2E5DE31E2C3E6700F87FC4 /* SpartanRequestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD31E2C3E6700F87FC4 /* SpartanRequestLogger.swift */; };
+		5C2E5DE41E2C3E6700F87FC4 /* SpartanRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD41E2C3E6700F87FC4 /* SpartanRequestManager.swift */; };
+		5C2E5DE51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift */; };
+		5C2E5DE61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift */; };
+		5C2E5DE71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift */; };
+		5C2E5DE81E2C3E6700F87FC4 /* SpartanTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD81E2C3E6700F87FC4 /* SpartanTrack.swift */; };
+		5C2E5DE91E2C3E6700F87FC4 /* SpartanURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD91E2C3E6700F87FC4 /* SpartanURL.swift */; };
+		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		804ECA0384EDD182BBA23115 /* Pods_SpartanExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0D202FE17DD4ECA215202B /* Pods_SpartanExample.framework */; };
+		D2090D30B95669846D7F0090 /* Pods_SpartanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0799769FD03295157DC419D /* Pods_SpartanTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C1261F51E2C54A1000827C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = SpartanExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		050B53841768FA649B2CA653 /* Pods-SpartanUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanUnitTests/Pods-SpartanUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AE07E5A7B998E1FB8A68B91 /* Pods-SpartanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanTests/Pods-SpartanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		579B6923694B30A7521FAACD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5C1261F01E2C54A1000827C7 /* SpartanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpartanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1261F21E2C54A1000827C7 /* SpartanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartanTests.swift; sourceTree = "<group>"; };
+		5C1261F41E2C54A1000827C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2E5DCA1E2C3E6700F87FC4 /* Spartan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spartan.swift; path = ../../Spartan/Classes/Spartan.swift; sourceTree = "<group>"; };
+		5C2E5DCB1E2C3E6700F87FC4 /* SpartanAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanAlbum.swift; path = ../../Spartan/Classes/SpartanAlbum.swift; sourceTree = "<group>"; };
+		5C2E5DCC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanCopyrightObject.swift; path = ../../Spartan/Classes/SpartanCopyrightObject.swift; sourceTree = "<group>"; };
+		5C2E5DCD1E2C3E6700F87FC4 /* SpartanError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanError.swift; path = ../../Spartan/Classes/SpartanError.swift; sourceTree = "<group>"; };
+		5C2E5DCE1E2C3E6700F87FC4 /* SpartanImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanImage.swift; path = ../../Spartan/Classes/SpartanImage.swift; sourceTree = "<group>"; };
+		5C2E5DCF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanLinkedTrackObject.swift; path = ../../Spartan/Classes/SpartanLinkedTrackObject.swift; sourceTree = "<group>"; };
+		5C2E5DD01E2C3E6700F87FC4 /* SpartanObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanObject.swift; path = ../../Spartan/Classes/SpartanObject.swift; sourceTree = "<group>"; };
+		5C2E5DD11E2C3E6700F87FC4 /* SpartanPagingObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanPagingObject.swift; path = ../../Spartan/Classes/SpartanPagingObject.swift; sourceTree = "<group>"; };
+		5C2E5DD21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestAdapater.swift; path = ../../Spartan/Classes/SpartanRequestAdapater.swift; sourceTree = "<group>"; };
+		5C2E5DD31E2C3E6700F87FC4 /* SpartanRequestLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestLogger.swift; path = ../../Spartan/Classes/SpartanRequestLogger.swift; sourceTree = "<group>"; };
+		5C2E5DD41E2C3E6700F87FC4 /* SpartanRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestManager.swift; path = ../../Spartan/Classes/SpartanRequestManager.swift; sourceTree = "<group>"; };
+		5C2E5DD51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanSimplifiedAlbum.swift; path = ../../Spartan/Classes/SpartanSimplifiedAlbum.swift; sourceTree = "<group>"; };
+		5C2E5DD61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanSimplifiedArtist.swift; path = ../../Spartan/Classes/SpartanSimplifiedArtist.swift; sourceTree = "<group>"; };
+		5C2E5DD71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanSimplifiedTrack.swift; path = ../../Spartan/Classes/SpartanSimplifiedTrack.swift; sourceTree = "<group>"; };
+		5C2E5DD81E2C3E6700F87FC4 /* SpartanTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanTrack.swift; path = ../../Spartan/Classes/SpartanTrack.swift; sourceTree = "<group>"; };
+		5C2E5DD91E2C3E6700F87FC4 /* SpartanURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanURL.swift; path = ../../Spartan/Classes/SpartanURL.swift; sourceTree = "<group>"; };
+		607FACD01AFB9204008FA782 /* SpartanExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartanExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7F0D202FE17DD4ECA215202B /* Pods_SpartanExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A468AA955F2CAE430D18190D /* Pods-SpartanUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanUnitTests/Pods-SpartanUnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		A74418BFEFE28DD1E6638234 /* Pods-SpartanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanTests/Pods-SpartanTests.release.xcconfig"; sourceTree = "<group>"; };
+		B6BDEEB8D6A6540481803AD9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C628933ECF8778671B80AF7E /* Spartan.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Spartan.podspec; path = ../Spartan.podspec; sourceTree = "<group>"; };
+		D2621101D8D15FE4F12863F3 /* Pods-SpartanExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanExample/Pods-SpartanExample.release.xcconfig"; sourceTree = "<group>"; };
+		F0799769FD03295157DC419D /* Pods_SpartanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CC7B10F35CDB83F37498AF /* Pods-SpartanExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanExample/Pods-SpartanExample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C1261ED1E2C54A1000827C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2090D30B95669846D7F0090 /* Pods_SpartanTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACCD1AFB9204008FA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804ECA0384EDD182BBA23115 /* Pods_SpartanExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38A7E7A1F6C6898B0BF38DAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6CC7B10F35CDB83F37498AF /* Pods-SpartanExample.debug.xcconfig */,
+				D2621101D8D15FE4F12863F3 /* Pods-SpartanExample.release.xcconfig */,
+				050B53841768FA649B2CA653 /* Pods-SpartanUnitTests.debug.xcconfig */,
+				A468AA955F2CAE430D18190D /* Pods-SpartanUnitTests.release.xcconfig */,
+				1AE07E5A7B998E1FB8A68B91 /* Pods-SpartanTests.debug.xcconfig */,
+				A74418BFEFE28DD1E6638234 /* Pods-SpartanTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C1261F11E2C54A1000827C7 /* SpartanTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C1261F21E2C54A1000827C7 /* SpartanTests.swift */,
+				5C1261F41E2C54A1000827C7 /* Info.plist */,
+			);
+			path = SpartanTests;
+			sourceTree = "<group>";
+		};
+		5CFD230F1E2C35BC00C8ED7E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5C2E5DCA1E2C3E6700F87FC4 /* Spartan.swift */,
+				5C2E5DCB1E2C3E6700F87FC4 /* SpartanAlbum.swift */,
+				5C2E5DCC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift */,
+				5C2E5DCD1E2C3E6700F87FC4 /* SpartanError.swift */,
+				5C2E5DCE1E2C3E6700F87FC4 /* SpartanImage.swift */,
+				5C2E5DCF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift */,
+				5C2E5DD01E2C3E6700F87FC4 /* SpartanObject.swift */,
+				5C2E5DD11E2C3E6700F87FC4 /* SpartanPagingObject.swift */,
+				5C2E5DD21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift */,
+				5C2E5DD31E2C3E6700F87FC4 /* SpartanRequestLogger.swift */,
+				5C2E5DD41E2C3E6700F87FC4 /* SpartanRequestManager.swift */,
+				5C2E5DD51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift */,
+				5C2E5DD61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift */,
+				5C2E5DD71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift */,
+				5C2E5DD81E2C3E6700F87FC4 /* SpartanTrack.swift */,
+				5C2E5DD91E2C3E6700F87FC4 /* SpartanURL.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		607FACC71AFB9204008FA782 = {
+			isa = PBXGroup;
+			children = (
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD21AFB9204008FA782 /* Example for Spartan */,
+				5C1261F11E2C54A1000827C7 /* SpartanTests */,
+				607FACD11AFB9204008FA782 /* Products */,
+				38A7E7A1F6C6898B0BF38DAA /* Pods */,
+				F0D4B043E94A169E92919309 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		607FACD11AFB9204008FA782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD01AFB9204008FA782 /* SpartanExample.app */,
+				5C1261F01E2C54A1000827C7 /* SpartanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607FACD21AFB9204008FA782 /* Example for Spartan */ = {
+			isa = PBXGroup;
+			children = (
+				5CFD230F1E2C35BC00C8ED7E /* Source */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
+			);
+			name = "Example for Spartan";
+			path = Spartan;
+			sourceTree = "<group>";
+		};
+		607FACD31AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD41AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				C628933ECF8778671B80AF7E /* Spartan.podspec */,
+				B6BDEEB8D6A6540481803AD9 /* README.md */,
+				579B6923694B30A7521FAACD /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		F0D4B043E94A169E92919309 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F0D202FE17DD4ECA215202B /* Pods_SpartanExample.framework */,
+				F0799769FD03295157DC419D /* Pods_SpartanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C1261EF1E2C54A1000827C7 /* SpartanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C1261F71E2C54A1000827C7 /* Build configuration list for PBXNativeTarget "SpartanTests" */;
+			buildPhases = (
+				7799E4A9F9C74FAEFB8C622C /* [CP] Check Pods Manifest.lock */,
+				5C1261EC1E2C54A1000827C7 /* Sources */,
+				5C1261ED1E2C54A1000827C7 /* Frameworks */,
+				5C1261EE1E2C54A1000827C7 /* Resources */,
+				ECC745E6AB8C75D66AFC88A5 /* [CP] Embed Pods Frameworks */,
+				C1EB1E4668B9F074E3F494A4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C1261F61E2C54A1000827C7 /* PBXTargetDependency */,
+			);
+			name = SpartanTests;
+			productName = SpartanTests;
+			productReference = 5C1261F01E2C54A1000827C7 /* SpartanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		607FACCF1AFB9204008FA782 /* SpartanExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SpartanExample" */;
+			buildPhases = (
+				B7E659C39AAB391EFAF8BA97 /* [CP] Check Pods Manifest.lock */,
+				607FACCC1AFB9204008FA782 /* Sources */,
+				607FACCD1AFB9204008FA782 /* Frameworks */,
+				607FACCE1AFB9204008FA782 /* Resources */,
+				917188EC069488F4497DB655 /* [CP] Embed Pods Frameworks */,
+				4A9D76725B4EA34EC7FD99EE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpartanExample;
+			productName = Spartan;
+			productReference = 607FACD01AFB9204008FA782 /* SpartanExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607FACC81AFB9204008FA782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = CocoaPods;
+				TargetAttributes = {
+					5C1261EF1E2C54A1000827C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					607FACCF1AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0820;
+					};
+				};
+			};
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Spartan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 607FACC71AFB9204008FA782;
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				607FACCF1AFB9204008FA782 /* SpartanExample */,
+				5C1261EF1E2C54A1000827C7 /* SpartanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C1261EE1E2C54A1000827C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACCE1AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A9D76725B4EA34EC7FD99EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanExample/Pods-SpartanExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7799E4A9F9C74FAEFB8C622C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		917188EC069488F4497DB655 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanExample/Pods-SpartanExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E659C39AAB391EFAF8BA97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1EB1E4668B9F074E3F494A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanTests/Pods-SpartanTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECC745E6AB8C75D66AFC88A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanTests/Pods-SpartanTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C1261EC1E2C54A1000827C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1261FA1E2C54AE000827C7 /* Spartan.swift in Sources */,
+				5C1261FB1E2C54AE000827C7 /* SpartanAlbum.swift in Sources */,
+				5C1261FC1E2C54AE000827C7 /* SpartanCopyrightObject.swift in Sources */,
+				5C1261FD1E2C54AE000827C7 /* SpartanError.swift in Sources */,
+				5C1261FE1E2C54AE000827C7 /* SpartanImage.swift in Sources */,
+				5C1261FF1E2C54AE000827C7 /* SpartanLinkedTrackObject.swift in Sources */,
+				5C1262001E2C54AE000827C7 /* SpartanObject.swift in Sources */,
+				5C1262011E2C54AE000827C7 /* SpartanPagingObject.swift in Sources */,
+				5C1262021E2C54AE000827C7 /* SpartanRequestAdapater.swift in Sources */,
+				5C1262031E2C54AE000827C7 /* SpartanRequestLogger.swift in Sources */,
+				5C1262041E2C54AE000827C7 /* SpartanRequestManager.swift in Sources */,
+				5C1262051E2C54AE000827C7 /* SpartanSimplifiedAlbum.swift in Sources */,
+				5C1262061E2C54AE000827C7 /* SpartanSimplifiedArtist.swift in Sources */,
+				5C1262071E2C54AE000827C7 /* SpartanSimplifiedTrack.swift in Sources */,
+				5C1262081E2C54AE000827C7 /* SpartanTrack.swift in Sources */,
+				5C1262091E2C54AE000827C7 /* SpartanURL.swift in Sources */,
+				5C1261F31E2C54A1000827C7 /* SpartanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACCC1AFB9204008FA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2E5DE11E2C3E6700F87FC4 /* SpartanPagingObject.swift in Sources */,
+				5C2E5DDA1E2C3E6700F87FC4 /* Spartan.swift in Sources */,
+				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				5C2E5DDC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift in Sources */,
+				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				5C2E5DDE1E2C3E6700F87FC4 /* SpartanImage.swift in Sources */,
+				5C2E5DE81E2C3E6700F87FC4 /* SpartanTrack.swift in Sources */,
+				5C2E5DDF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift in Sources */,
+				5C2E5DE41E2C3E6700F87FC4 /* SpartanRequestManager.swift in Sources */,
+				5C2E5DE31E2C3E6700F87FC4 /* SpartanRequestLogger.swift in Sources */,
+				5C2E5DE51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift in Sources */,
+				5C2E5DE01E2C3E6700F87FC4 /* SpartanObject.swift in Sources */,
+				5C2E5DE71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift in Sources */,
+				5C2E5DE61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift in Sources */,
+				5C2E5DDD1E2C3E6700F87FC4 /* SpartanError.swift in Sources */,
+				5C2E5DE91E2C3E6700F87FC4 /* SpartanURL.swift in Sources */,
+				5C2E5DE21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift in Sources */,
+				5C2E5DDB1E2C3E6700F87FC4 /* SpartanAlbum.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C1261F61E2C54A1000827C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* SpartanExample */;
+			targetProxy = 5C1261F51E2C54A1000827C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDA1AFB9204008FA782 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDF1AFB9204008FA782 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C1261F81E2C54A1000827C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE07E5A7B998E1FB8A68B91 /* Pods-SpartanTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SpartanTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dalton-Hinterscher.SpartanTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpartanExample.app/SpartanExample";
+			};
+			name = Debug;
+		};
+		5C1261F91E2C54A1000827C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A74418BFEFE28DD1E6638234 /* Pods-SpartanTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = SpartanTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dalton-Hinterscher.SpartanTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpartanExample.app/SpartanExample";
+			};
+			name = Release;
+		};
+		607FACED1AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		607FACEE1AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607FACF01AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6CC7B10F35CDB83F37498AF /* Pods-SpartanExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Spartan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		607FACF11AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2621101D8D15FE4F12863F3 /* Pods-SpartanExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Spartan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C1261F71E2C54A1000827C7 /* Build configuration list for PBXNativeTarget "SpartanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1261F81E2C54A1000827C7 /* Debug */,
+				5C1261F91E2C54A1000827C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Spartan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SpartanExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACF01AFB9204008FA782 /* Debug */,
+				607FACF11AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
+}

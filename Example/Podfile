@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+target 'SpartanExample' do
+  pod 'Spartan', :path => '../'
+end
+
+target 'SpartanTests' do
+    pod 'Spartan', :path => '../'
+end

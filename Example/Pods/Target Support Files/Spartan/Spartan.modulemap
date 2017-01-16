@@ -1,0 +1,6 @@
+framework module Spartan {
+  umbrella header "Spartan-umbrella.h"
+
+  export *
+  module * { export * }
+}
