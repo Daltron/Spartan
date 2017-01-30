@@ -24,7 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SpartanTests.xcscheme</key>
+		<key>Pods-Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,12 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>2B96275613DB5FB0436A677B9B233213</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>98A2050375DBA7738D9B943D9F2CC8DE</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

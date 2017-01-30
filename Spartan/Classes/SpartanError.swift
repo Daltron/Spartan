@@ -16,21 +16,68 @@
  
  */
 
-import UIKit
+import ObjectMapper
 
-public class SpartanError: NSObject {
+public enum SpartanErrorType {
+    case unauthorized
+    case other
+}
+
+public class SpartanError: NSObject, Mappable {
     
-    fileprivate let ERROR_PREFIX = "SpartanError:"
+    private let ERROR_PREFIX = "SpartanError:"
     
     override open var description: String {
         return "\(ERROR_PREFIX) \(errorMessage!)"
     }
     
-    private(set) open var errorMessage:String!
+    private var statusCode: Int!
+    public private(set) var errorMessage: String!
+    public private(set) var errorType: SpartanErrorType!
     
-    init(error:Error) {
+    init(error: Error) {
         super.init()
         errorMessage = error.localizedDescription
+        determineErrorType(statusCode: (error as NSError).code)
+    }
+    
+    required public init?(map: Map) {
+        super.init()
+        mapping(map: map)
+    }
+    
+    public func mapping(map: Map) {
+        statusCode <- map["error.status"]
+        errorMessage <- map["error.message"]
+        determineErrorType(statusCode: statusCode)
+    }
+    
+    private func determineErrorType(statusCode: Int) {
+        if statusCode == 401 {
+            errorType = .unauthorized
+        } else {
+            errorType = .other
+        }
+    }
+    
+    class func parseSpotifyError(data: Data?, error: Error, statusCode: Int? = nil) -> SpartanError {
         
+        let spartanError: SpartanError!
+        do {
+            if let data = data {
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+                if json is [String : Any] {
+                    spartanError = Mapper<SpartanError>().map(JSON: json as! [String : Any])
+                } else {
+                    spartanError = SpartanError(error: error)
+                }
+                
+            } else {
+                spartanError = SpartanError(error: error)
+            }
+            return spartanError
+        } catch {
+            return SpartanError(error: error)
+        }
     }
 }

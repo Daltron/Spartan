@@ -18,26 +18,14 @@
 
 import ObjectMapper
 
-public class SpartanAlbum: SpartanSimplifiedAlbum {
+public class Playlist: SimplifiedPlaylist {
     
-    public private(set) var copyrights: [SpartanCopyrightObject]!
-    public private(set) var externalIds: [String : String]!
-    public private(set) var genres: [String]!
-    public private(set) var label: String!
-    public private(set) var popularity: Int!
-    public private(set) var releaseDate: String!
-    public private(set) var releaseDatePrecision: String!
-    public private(set) var tracks: SpartanPagingObject<SpartanSimplifiedTrack>!
+    public private(set) var description: String?
+    public private(set) var followers: FollowersObject!
 
-    public override func mapping(map: Map) {
+    override public func mapping(map: Map) {
         super.mapping(map: map)
-        copyrights <- map["copyrights"]
-        externalIds <- map["external_ids"]
-        genres <- map["genres"]
-        label <- map["label"]
-        popularity <- map["popularity"]
-        releaseDate <- map["release_date"]
-        releaseDatePrecision <- map["release_date_precision"]
-        tracks <- map["tracks"]
+        description <- map["description"]
+        followers <- map["followers"]
     }
 }

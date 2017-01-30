@@ -18,16 +18,29 @@
 
 import ObjectMapper
 
-public class SpartanTrack: SpartanSimplifiedTrack {
-
-    public private(set) var album: SpartanSimplifiedAlbum!
-    public private(set) var externalIds: [String : String]!
-    public private(set) var popularity: Int!
+public class PagingObject<T: Mappable> : Mappable  {
     
-    public override func mapping(map: Map) {
-        super.mapping(map: map)
-        album <- map["album"]
-        externalIds <- map["external_ids"]
-        popularity <- map["popularity"]
+    public private(set) var href: String!
+    public private(set) var items: [T]!
+    public private(set) var limit: Int!
+    public private(set) var next: String?
+    public private(set) var offset: Int!
+    public private(set) var previous: String?
+    public private(set) var total: Int!
+    public private(set) var cursors: CursorsObject?
+    
+    public required init?(map: Map) {
+        mapping(map: map)
+    }
+    
+    public func mapping(map: Map) {
+        href <- map["href"]
+        items <- map["items"]
+        limit <- map["limit"]
+        next <- map["next"]
+        offset <- map["offset"]
+        previous <- map["previous"]
+        total <- map["total"]
+        cursors <- map["cursors"]
     }
 }

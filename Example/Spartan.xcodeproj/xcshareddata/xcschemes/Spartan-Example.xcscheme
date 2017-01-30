@@ -56,7 +56,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C1261B21E2C5021000827C7"
+               BlueprintIdentifier = "5C2822F41E2F0FC900C7FC72"
                BuildableName = "SpartanTests.xctest"
                BlueprintName = "SpartanTests"
                ReferencedContainer = "container:Spartan.xcodeproj">
@@ -69,6 +69,16 @@
                BlueprintIdentifier = "5C1261D11E2C5271000827C7"
                BuildableName = "SpartanUnitTests.xctest"
                BlueprintName = "SpartanUnitTests"
+               ReferencedContainer = "container:Spartan.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5C627F2C1E2F14D50042D9BE"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:Spartan.xcodeproj">
             </BuildableReference>
          </TestableReference>

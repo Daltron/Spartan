@@ -18,17 +18,18 @@
 
 import ObjectMapper
 
-public class SpartanCopyrightObject: Mappable {
-    
-    public private(set) var text: String!
-    public private(set) var type: String!
+public class PrivateUser: PublicUser {
 
-    public required init?(map: Map) {
-        mapping(map: map)
-    }
+    public private(set) var birthdate: String?
+    public private(set) var country: String?
+    public private(set) var email: String?
+    public private(set) var product: String?
     
-    public func mapping(map: Map) {
-        text <- map["text"]
-        type <- map["type"]
+    override public func mapping(map: Map) {
+        super.mapping(map: map)
+        birthdate <- map["birthdate"]
+        country <- map["country"]
+        email <- map["email"]
+        product <- map["product"]
     }
 }

@@ -18,27 +18,15 @@
 
 import ObjectMapper
 
-public class SpartanPagingObject<T: SpartanObject> : Mappable  {
-    
-    public private(set) var href: String!
-    public private(set) var items: [T]!
-    public private(set) var limit: Int!
-    public private(set) var next: String?
-    public private(set) var offset: Int!
-    public private(set) var previous: String?
-    public private(set) var total: Int!
+public class SnapshotResponse: Mappable {
+
+    public private(set) var snapshotId: String!
     
     public required init?(map: Map) {
         mapping(map: map)
     }
     
     public func mapping(map: Map) {
-        href <- map["href"]
-        items <- map["items"]
-        limit <- map["limit"]
-        next <- map["next"]
-        offset <- map["offset"]
-        previous <- map["previous"]
-        total <- map["total"]
+        snapshotId <- map["snapshot_id"]
     }
 }

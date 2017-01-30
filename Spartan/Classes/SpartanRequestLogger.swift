@@ -26,7 +26,7 @@ class SpartanRequestLogger: NSObject {
         if Spartan.loggingEnabled {
             let method = request.request!.httpMethod!
             let urlString = request.request!.url!.absoluteString
-            print("💙 \(LOGGER_PREFIX) \(method) \(urlString)")
+            print("💙 \(LOGGER_PREFIX) \(method) \(sanitizedUrlString(urlString: urlString))")
         }
     }
     
@@ -37,12 +37,15 @@ class SpartanRequestLogger: NSObject {
             let statusCode = responseObject.statusCode
             let statusCodeString = STATUS_CODE_STRINGS[statusCode]
             let duration = response.timeline.totalDuration
-            print("\(emoji(for: statusCode)) \(LOGGER_PREFIX) \(method) \(urlString) (\(statusCode) \(statusCodeString!)) \(duration) seconds")
+            print("\(emoji(for: statusCode)) \(LOGGER_PREFIX) \(method) \(sanitizedUrlString(urlString: urlString)) (\(statusCode) \(statusCodeString!)) \(duration) seconds")
         }
-
     }
     
-    fileprivate class func emoji(for statusCode:Int) -> String {
+    private class func sanitizedUrlString(urlString: String) -> String {
+        return urlString.components(separatedBy: "?").first!
+    }
+    
+    private class func emoji(for statusCode:Int) -> String {
         if statusCode >= 200 && statusCode <= 299 {
             return "💚"
         } else {
@@ -50,7 +53,7 @@ class SpartanRequestLogger: NSObject {
         }
     }
     
-    fileprivate static let STATUS_CODE_STRINGS =
+    private static let STATUS_CODE_STRINGS =
         [100: "Continue",
          101: "Switching Protocols",
          102: "Processing",

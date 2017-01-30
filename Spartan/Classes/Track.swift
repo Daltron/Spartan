@@ -16,8 +16,23 @@
  
  */
 
-import UIKit
+import Alamofire
+import ObjectMapper
 
-public class SpartanSimplifiedArtist: SpartanObject {
+public class Track: SimplifiedTrack {
 
+    public private(set) var album: SimplifiedAlbum!
+    public private(set) var externalIds: [String : String]!
+    public private(set) var popularity: Int!
+    
+    public override func mapping(map: Map) {
+        super.mapping(map: map)
+        album <- map["album"]
+        externalIds <- map["external_ids"]
+        popularity <- map["popularity"]
+    }
+    
+    override class func find<T: Mappable>(_ id: String, parameters: [String: Any]? = nil, success: ((T) -> Void)?, failure: ((SpartanError) -> Void)?) -> Request {
+        return SpartanRequestManager.mapObject(.get, urlString: urlForFind(id).stringValue, keyPath: Album.root, success: success, failure: failure)
+    }
 }

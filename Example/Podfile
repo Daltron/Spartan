@@ -6,6 +6,6 @@ target 'SpartanExample' do
   pod 'Spartan', :path => '../'
 end
 
-target 'SpartanTests' do
+target 'Tests' do
     pod 'Spartan', :path => '../'
 end

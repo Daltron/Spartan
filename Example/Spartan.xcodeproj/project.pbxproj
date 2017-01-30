@@ -7,50 +7,110 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C1261F31E2C54A1000827C7 /* SpartanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1261F21E2C54A1000827C7 /* SpartanTests.swift */; };
-		5C1261FA1E2C54AE000827C7 /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCA1E2C3E6700F87FC4 /* Spartan.swift */; };
-		5C1261FB1E2C54AE000827C7 /* SpartanAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCB1E2C3E6700F87FC4 /* SpartanAlbum.swift */; };
-		5C1261FC1E2C54AE000827C7 /* SpartanCopyrightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift */; };
-		5C1261FD1E2C54AE000827C7 /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCD1E2C3E6700F87FC4 /* SpartanError.swift */; };
-		5C1261FE1E2C54AE000827C7 /* SpartanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCE1E2C3E6700F87FC4 /* SpartanImage.swift */; };
-		5C1261FF1E2C54AE000827C7 /* SpartanLinkedTrackObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift */; };
-		5C1262001E2C54AE000827C7 /* SpartanObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD01E2C3E6700F87FC4 /* SpartanObject.swift */; };
-		5C1262011E2C54AE000827C7 /* SpartanPagingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD11E2C3E6700F87FC4 /* SpartanPagingObject.swift */; };
-		5C1262021E2C54AE000827C7 /* SpartanRequestAdapater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift */; };
-		5C1262031E2C54AE000827C7 /* SpartanRequestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD31E2C3E6700F87FC4 /* SpartanRequestLogger.swift */; };
-		5C1262041E2C54AE000827C7 /* SpartanRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD41E2C3E6700F87FC4 /* SpartanRequestManager.swift */; };
-		5C1262051E2C54AE000827C7 /* SpartanSimplifiedAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift */; };
-		5C1262061E2C54AE000827C7 /* SpartanSimplifiedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift */; };
-		5C1262071E2C54AE000827C7 /* SpartanSimplifiedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift */; };
-		5C1262081E2C54AE000827C7 /* SpartanTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD81E2C3E6700F87FC4 /* SpartanTrack.swift */; };
-		5C1262091E2C54AE000827C7 /* SpartanURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD91E2C3E6700F87FC4 /* SpartanURL.swift */; };
-		5C2E5DDA1E2C3E6700F87FC4 /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCA1E2C3E6700F87FC4 /* Spartan.swift */; };
-		5C2E5DDB1E2C3E6700F87FC4 /* SpartanAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCB1E2C3E6700F87FC4 /* SpartanAlbum.swift */; };
-		5C2E5DDC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift */; };
-		5C2E5DDD1E2C3E6700F87FC4 /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCD1E2C3E6700F87FC4 /* SpartanError.swift */; };
-		5C2E5DDE1E2C3E6700F87FC4 /* SpartanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCE1E2C3E6700F87FC4 /* SpartanImage.swift */; };
-		5C2E5DDF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DCF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift */; };
-		5C2E5DE01E2C3E6700F87FC4 /* SpartanObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD01E2C3E6700F87FC4 /* SpartanObject.swift */; };
-		5C2E5DE11E2C3E6700F87FC4 /* SpartanPagingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD11E2C3E6700F87FC4 /* SpartanPagingObject.swift */; };
-		5C2E5DE21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift */; };
-		5C2E5DE31E2C3E6700F87FC4 /* SpartanRequestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD31E2C3E6700F87FC4 /* SpartanRequestLogger.swift */; };
-		5C2E5DE41E2C3E6700F87FC4 /* SpartanRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD41E2C3E6700F87FC4 /* SpartanRequestManager.swift */; };
-		5C2E5DE51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift */; };
-		5C2E5DE61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift */; };
-		5C2E5DE71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift */; };
-		5C2E5DE81E2C3E6700F87FC4 /* SpartanTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD81E2C3E6700F87FC4 /* SpartanTrack.swift */; };
-		5C2E5DE91E2C3E6700F87FC4 /* SpartanURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E5DD91E2C3E6700F87FC4 /* SpartanURL.swift */; };
+		55C7EA9C29FF4879F819610E /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B3E230F88599467808CB46 /* Pods_Tests.framework */; };
+		5C627F301E2F14D50042D9BE /* NonOAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C627F2F1E2F14D50042D9BE /* NonOAuthTests.swift */; };
+		5CF033941E3ED69F000C97CC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033671E3ED69F000C97CC /* Album.swift */; };
+		5CF033951E3ED69F000C97CC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033681E3ED69F000C97CC /* Artist.swift */; };
+		5CF033961E3ED69F000C97CC /* AudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033691E3ED69F000C97CC /* AudioAnalysis.swift */; };
+		5CF033971E3ED69F000C97CC /* AudioAnalysisBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336A1E3ED69F000C97CC /* AudioAnalysisBar.swift */; };
+		5CF033981E3ED69F000C97CC /* AudioAnalysisBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336B1E3ED69F000C97CC /* AudioAnalysisBeat.swift */; };
+		5CF033991E3ED69F000C97CC /* AudioAnalysisMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336C1E3ED69F000C97CC /* AudioAnalysisMeta.swift */; };
+		5CF0339A1E3ED69F000C97CC /* AudioAnalysisSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336D1E3ED69F000C97CC /* AudioAnalysisSection.swift */; };
+		5CF0339B1E3ED69F000C97CC /* AudioAnalysisSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336E1E3ED69F000C97CC /* AudioAnalysisSegment.swift */; };
+		5CF0339C1E3ED69F000C97CC /* AudioAnalysisTatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336F1E3ED69F000C97CC /* AudioAnalysisTatum.swift */; };
+		5CF0339D1E3ED69F000C97CC /* AudioAnalysisTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033701E3ED69F000C97CC /* AudioAnalysisTrack.swift */; };
+		5CF0339E1E3ED69F000C97CC /* AudioFeaturesObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033711E3ED69F000C97CC /* AudioFeaturesObject.swift */; };
+		5CF0339F1E3ED69F000C97CC /* CategoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033721E3ED69F000C97CC /* CategoryObject.swift */; };
+		5CF033A01E3ED69F000C97CC /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033731E3ED69F000C97CC /* CountryCode.swift */; };
+		5CF033A11E3ED69F000C97CC /* FeaturedPlaylistsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033741E3ED69F000C97CC /* FeaturedPlaylistsObject.swift */; };
+		5CF033A21E3ED69F000C97CC /* FollowersObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033751E3ED69F000C97CC /* FollowersObject.swift */; };
+		5CF033A31E3ED69F000C97CC /* FollowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033761E3ED69F000C97CC /* FollowType.swift */; };
+		5CF033A41E3ED69F000C97CC /* ItemSearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033771E3ED69F000C97CC /* ItemSearchType.swift */; };
+		5CF033A51E3ED69F000C97CC /* LinkedTrackObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033781E3ED69F000C97CC /* LinkedTrackObject.swift */; };
+		5CF033A61E3ED69F000C97CC /* PagingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033791E3ED69F000C97CC /* PagingObject.swift */; };
+		5CF033A71E3ED69F000C97CC /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337A1E3ED69F000C97CC /* Playlist.swift */; };
+		5CF033A81E3ED69F000C97CC /* PlaylistTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337B1E3ED69F000C97CC /* PlaylistTrack.swift */; };
+		5CF033A91E3ED69F000C97CC /* PrivateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337C1E3ED69F000C97CC /* PrivateUser.swift */; };
+		5CF033AA1E3ED69F000C97CC /* PublicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337D1E3ED69F000C97CC /* PublicUser.swift */; };
+		5CF033AB1E3ED69F000C97CC /* RecommendationsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337E1E3ED69F000C97CC /* RecommendationsObject.swift */; };
+		5CF033AC1E3ED69F000C97CC /* RecommendationsSeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337F1E3ED69F000C97CC /* RecommendationsSeedObject.swift */; };
+		5CF033AD1E3ED69F000C97CC /* SavedAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033801E3ED69F000C97CC /* SavedAlbum.swift */; };
+		5CF033AE1E3ED69F000C97CC /* SavedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033811E3ED69F000C97CC /* SavedTrack.swift */; };
+		5CF033AF1E3ED69F000C97CC /* SimplifiedAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033821E3ED69F000C97CC /* SimplifiedAlbum.swift */; };
+		5CF033B01E3ED69F000C97CC /* SimplifiedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033831E3ED69F000C97CC /* SimplifiedArtist.swift */; };
+		5CF033B11E3ED69F000C97CC /* SimplifiedPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033841E3ED69F000C97CC /* SimplifiedPlaylist.swift */; };
+		5CF033B21E3ED69F000C97CC /* SimplifiedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033851E3ED69F000C97CC /* SimplifiedTrack.swift */; };
+		5CF033B31E3ED69F000C97CC /* SnapshotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033861E3ED69F000C97CC /* SnapshotResponse.swift */; };
+		5CF033B41E3ED69F000C97CC /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033871E3ED69F000C97CC /* Spartan.swift */; };
+		5CF033B51E3ED69F000C97CC /* SpartanBaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033881E3ED69F000C97CC /* SpartanBaseObject.swift */; };
+		5CF033B81E3ED69F000C97CC /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338B1E3ED69F000C97CC /* SpartanError.swift */; };
+		5CF033B91E3ED69F000C97CC /* SpartanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338C1E3ED69F000C97CC /* SpartanImage.swift */; };
+		5CF033BA1E3ED69F000C97CC /* SpartanRequestAdapater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338D1E3ED69F000C97CC /* SpartanRequestAdapater.swift */; };
+		5CF033BB1E3ED69F000C97CC /* SpartanRequestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338E1E3ED69F000C97CC /* SpartanRequestLogger.swift */; };
+		5CF033BC1E3ED69F000C97CC /* SpartanRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */; };
+		5CF033BD1E3ED69F000C97CC /* SpartanURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033901E3ED69F000C97CC /* SpartanURL.swift */; };
+		5CF033BE1E3ED69F000C97CC /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033911E3ED69F000C97CC /* Track.swift */; };
+		5CF033BF1E3ED69F000C97CC /* TracksObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033921E3ED69F000C97CC /* TracksObject.swift */; };
+		5CF033C01E3ED69F000C97CC /* TuneableTrackAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033931E3ED69F000C97CC /* TuneableTrackAttribute.swift */; };
+		5CF033C11E3ED6AB000C97CC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033671E3ED69F000C97CC /* Album.swift */; };
+		5CF033C21E3ED6AB000C97CC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033681E3ED69F000C97CC /* Artist.swift */; };
+		5CF033C31E3ED6AB000C97CC /* AudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033691E3ED69F000C97CC /* AudioAnalysis.swift */; };
+		5CF033C41E3ED6AB000C97CC /* AudioAnalysisBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336A1E3ED69F000C97CC /* AudioAnalysisBar.swift */; };
+		5CF033C51E3ED6AB000C97CC /* AudioAnalysisBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336B1E3ED69F000C97CC /* AudioAnalysisBeat.swift */; };
+		5CF033C61E3ED6AB000C97CC /* AudioAnalysisMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336C1E3ED69F000C97CC /* AudioAnalysisMeta.swift */; };
+		5CF033C71E3ED6AB000C97CC /* AudioAnalysisSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336D1E3ED69F000C97CC /* AudioAnalysisSection.swift */; };
+		5CF033C81E3ED6AB000C97CC /* AudioAnalysisSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336E1E3ED69F000C97CC /* AudioAnalysisSegment.swift */; };
+		5CF033C91E3ED6AB000C97CC /* AudioAnalysisTatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0336F1E3ED69F000C97CC /* AudioAnalysisTatum.swift */; };
+		5CF033CA1E3ED6AB000C97CC /* AudioAnalysisTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033701E3ED69F000C97CC /* AudioAnalysisTrack.swift */; };
+		5CF033CB1E3ED6AB000C97CC /* AudioFeaturesObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033711E3ED69F000C97CC /* AudioFeaturesObject.swift */; };
+		5CF033CC1E3ED6AB000C97CC /* CategoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033721E3ED69F000C97CC /* CategoryObject.swift */; };
+		5CF033CD1E3ED6AB000C97CC /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033731E3ED69F000C97CC /* CountryCode.swift */; };
+		5CF033CE1E3ED6AB000C97CC /* FeaturedPlaylistsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033741E3ED69F000C97CC /* FeaturedPlaylistsObject.swift */; };
+		5CF033CF1E3ED6AB000C97CC /* FollowersObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033751E3ED69F000C97CC /* FollowersObject.swift */; };
+		5CF033D01E3ED6AB000C97CC /* FollowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033761E3ED69F000C97CC /* FollowType.swift */; };
+		5CF033D11E3ED6AB000C97CC /* ItemSearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033771E3ED69F000C97CC /* ItemSearchType.swift */; };
+		5CF033D21E3ED6AB000C97CC /* LinkedTrackObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033781E3ED69F000C97CC /* LinkedTrackObject.swift */; };
+		5CF033D31E3ED6AB000C97CC /* PagingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033791E3ED69F000C97CC /* PagingObject.swift */; };
+		5CF033D41E3ED6AB000C97CC /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337A1E3ED69F000C97CC /* Playlist.swift */; };
+		5CF033D51E3ED6AB000C97CC /* PlaylistTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337B1E3ED69F000C97CC /* PlaylistTrack.swift */; };
+		5CF033D61E3ED6AB000C97CC /* PrivateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337C1E3ED69F000C97CC /* PrivateUser.swift */; };
+		5CF033D71E3ED6AB000C97CC /* PublicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337D1E3ED69F000C97CC /* PublicUser.swift */; };
+		5CF033D81E3ED6AB000C97CC /* RecommendationsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337E1E3ED69F000C97CC /* RecommendationsObject.swift */; };
+		5CF033D91E3ED6AB000C97CC /* RecommendationsSeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0337F1E3ED69F000C97CC /* RecommendationsSeedObject.swift */; };
+		5CF033DA1E3ED6AB000C97CC /* SavedAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033801E3ED69F000C97CC /* SavedAlbum.swift */; };
+		5CF033DB1E3ED6AB000C97CC /* SavedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033811E3ED69F000C97CC /* SavedTrack.swift */; };
+		5CF033DC1E3ED6AB000C97CC /* SimplifiedAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033821E3ED69F000C97CC /* SimplifiedAlbum.swift */; };
+		5CF033DD1E3ED6AB000C97CC /* SimplifiedArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033831E3ED69F000C97CC /* SimplifiedArtist.swift */; };
+		5CF033DE1E3ED6AB000C97CC /* SimplifiedPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033841E3ED69F000C97CC /* SimplifiedPlaylist.swift */; };
+		5CF033DF1E3ED6AB000C97CC /* SimplifiedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033851E3ED69F000C97CC /* SimplifiedTrack.swift */; };
+		5CF033E01E3ED6AB000C97CC /* SnapshotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033861E3ED69F000C97CC /* SnapshotResponse.swift */; };
+		5CF033E11E3ED6AB000C97CC /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033871E3ED69F000C97CC /* Spartan.swift */; };
+		5CF033E21E3ED6AB000C97CC /* SpartanBaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033881E3ED69F000C97CC /* SpartanBaseObject.swift */; };
+		5CF033E51E3ED6AB000C97CC /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338B1E3ED69F000C97CC /* SpartanError.swift */; };
+		5CF033E61E3ED6AB000C97CC /* SpartanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338C1E3ED69F000C97CC /* SpartanImage.swift */; };
+		5CF033E71E3ED6AB000C97CC /* SpartanRequestAdapater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338D1E3ED69F000C97CC /* SpartanRequestAdapater.swift */; };
+		5CF033E81E3ED6AB000C97CC /* SpartanRequestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338E1E3ED69F000C97CC /* SpartanRequestLogger.swift */; };
+		5CF033E91E3ED6AB000C97CC /* SpartanRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */; };
+		5CF033EA1E3ED6AB000C97CC /* SpartanURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033901E3ED69F000C97CC /* SpartanURL.swift */; };
+		5CF033EB1E3ED6AB000C97CC /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033911E3ED69F000C97CC /* Track.swift */; };
+		5CF033EC1E3ED6AB000C97CC /* TracksObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033921E3ED69F000C97CC /* TracksObject.swift */; };
+		5CF033ED1E3ED6AB000C97CC /* TuneableTrackAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033931E3ED69F000C97CC /* TuneableTrackAttribute.swift */; };
+		5CF033F01E3ED77C000C97CC /* CopyrightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033EE1E3ED77C000C97CC /* CopyrightObject.swift */; };
+		5CF033F11E3ED77C000C97CC /* CursorsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033EF1E3ED77C000C97CC /* CursorsObject.swift */; };
+		5CF033F21E3ED785000C97CC /* CopyrightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033EE1E3ED77C000C97CC /* CopyrightObject.swift */; };
+		5CF033F31E3ED785000C97CC /* CursorsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033EF1E3ED77C000C97CC /* CursorsObject.swift */; };
+		5CF648791E34203300E0702B /* OAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF648781E34203300E0702B /* OAuthTests.swift */; };
+		5CF648A81E3448B300E0702B /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF648A71E3448B300E0702B /* BaseTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		804ECA0384EDD182BBA23115 /* Pods_SpartanExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0D202FE17DD4ECA215202B /* Pods_SpartanExample.framework */; };
-		D2090D30B95669846D7F0090 /* Pods_SpartanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0799769FD03295157DC419D /* Pods_SpartanTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5C1261F51E2C54A1000827C7 /* PBXContainerItemProxy */ = {
+		5C627F321E2F14D50042D9BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
 			proxyType = 1;
@@ -63,25 +123,56 @@
 		050B53841768FA649B2CA653 /* Pods-SpartanUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanUnitTests/Pods-SpartanUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1AE07E5A7B998E1FB8A68B91 /* Pods-SpartanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanTests/Pods-SpartanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		579B6923694B30A7521FAACD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		5C1261F01E2C54A1000827C7 /* SpartanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpartanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C1261F21E2C54A1000827C7 /* SpartanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartanTests.swift; sourceTree = "<group>"; };
-		5C1261F41E2C54A1000827C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C2E5DCA1E2C3E6700F87FC4 /* Spartan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spartan.swift; path = ../../Spartan/Classes/Spartan.swift; sourceTree = "<group>"; };
-		5C2E5DCB1E2C3E6700F87FC4 /* SpartanAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanAlbum.swift; path = ../../Spartan/Classes/SpartanAlbum.swift; sourceTree = "<group>"; };
-		5C2E5DCC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanCopyrightObject.swift; path = ../../Spartan/Classes/SpartanCopyrightObject.swift; sourceTree = "<group>"; };
-		5C2E5DCD1E2C3E6700F87FC4 /* SpartanError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanError.swift; path = ../../Spartan/Classes/SpartanError.swift; sourceTree = "<group>"; };
-		5C2E5DCE1E2C3E6700F87FC4 /* SpartanImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanImage.swift; path = ../../Spartan/Classes/SpartanImage.swift; sourceTree = "<group>"; };
-		5C2E5DCF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanLinkedTrackObject.swift; path = ../../Spartan/Classes/SpartanLinkedTrackObject.swift; sourceTree = "<group>"; };
-		5C2E5DD01E2C3E6700F87FC4 /* SpartanObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanObject.swift; path = ../../Spartan/Classes/SpartanObject.swift; sourceTree = "<group>"; };
-		5C2E5DD11E2C3E6700F87FC4 /* SpartanPagingObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanPagingObject.swift; path = ../../Spartan/Classes/SpartanPagingObject.swift; sourceTree = "<group>"; };
-		5C2E5DD21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestAdapater.swift; path = ../../Spartan/Classes/SpartanRequestAdapater.swift; sourceTree = "<group>"; };
-		5C2E5DD31E2C3E6700F87FC4 /* SpartanRequestLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestLogger.swift; path = ../../Spartan/Classes/SpartanRequestLogger.swift; sourceTree = "<group>"; };
-		5C2E5DD41E2C3E6700F87FC4 /* SpartanRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestManager.swift; path = ../../Spartan/Classes/SpartanRequestManager.swift; sourceTree = "<group>"; };
-		5C2E5DD51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanSimplifiedAlbum.swift; path = ../../Spartan/Classes/SpartanSimplifiedAlbum.swift; sourceTree = "<group>"; };
-		5C2E5DD61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanSimplifiedArtist.swift; path = ../../Spartan/Classes/SpartanSimplifiedArtist.swift; sourceTree = "<group>"; };
-		5C2E5DD71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanSimplifiedTrack.swift; path = ../../Spartan/Classes/SpartanSimplifiedTrack.swift; sourceTree = "<group>"; };
-		5C2E5DD81E2C3E6700F87FC4 /* SpartanTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanTrack.swift; path = ../../Spartan/Classes/SpartanTrack.swift; sourceTree = "<group>"; };
-		5C2E5DD91E2C3E6700F87FC4 /* SpartanURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanURL.swift; path = ../../Spartan/Classes/SpartanURL.swift; sourceTree = "<group>"; };
+		5C627F2D1E2F14D50042D9BE /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C627F2F1E2F14D50042D9BE /* NonOAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonOAuthTests.swift; sourceTree = "<group>"; };
+		5C627F311E2F14D50042D9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF033671E3ED69F000C97CC /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../../Spartan/Classes/Album.swift; sourceTree = "<group>"; };
+		5CF033681E3ED69F000C97CC /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = ../../Spartan/Classes/Artist.swift; sourceTree = "<group>"; };
+		5CF033691E3ED69F000C97CC /* AudioAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysis.swift; path = ../../Spartan/Classes/AudioAnalysis.swift; sourceTree = "<group>"; };
+		5CF0336A1E3ED69F000C97CC /* AudioAnalysisBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysisBar.swift; path = ../../Spartan/Classes/AudioAnalysisBar.swift; sourceTree = "<group>"; };
+		5CF0336B1E3ED69F000C97CC /* AudioAnalysisBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysisBeat.swift; path = ../../Spartan/Classes/AudioAnalysisBeat.swift; sourceTree = "<group>"; };
+		5CF0336C1E3ED69F000C97CC /* AudioAnalysisMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysisMeta.swift; path = ../../Spartan/Classes/AudioAnalysisMeta.swift; sourceTree = "<group>"; };
+		5CF0336D1E3ED69F000C97CC /* AudioAnalysisSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysisSection.swift; path = ../../Spartan/Classes/AudioAnalysisSection.swift; sourceTree = "<group>"; };
+		5CF0336E1E3ED69F000C97CC /* AudioAnalysisSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysisSegment.swift; path = ../../Spartan/Classes/AudioAnalysisSegment.swift; sourceTree = "<group>"; };
+		5CF0336F1E3ED69F000C97CC /* AudioAnalysisTatum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysisTatum.swift; path = ../../Spartan/Classes/AudioAnalysisTatum.swift; sourceTree = "<group>"; };
+		5CF033701E3ED69F000C97CC /* AudioAnalysisTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysisTrack.swift; path = ../../Spartan/Classes/AudioAnalysisTrack.swift; sourceTree = "<group>"; };
+		5CF033711E3ED69F000C97CC /* AudioFeaturesObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioFeaturesObject.swift; path = ../../Spartan/Classes/AudioFeaturesObject.swift; sourceTree = "<group>"; };
+		5CF033721E3ED69F000C97CC /* CategoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryObject.swift; path = ../../Spartan/Classes/CategoryObject.swift; sourceTree = "<group>"; };
+		5CF033731E3ED69F000C97CC /* CountryCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryCode.swift; path = ../../Spartan/Classes/CountryCode.swift; sourceTree = "<group>"; };
+		5CF033741E3ED69F000C97CC /* FeaturedPlaylistsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeaturedPlaylistsObject.swift; path = ../../Spartan/Classes/FeaturedPlaylistsObject.swift; sourceTree = "<group>"; };
+		5CF033751E3ED69F000C97CC /* FollowersObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowersObject.swift; path = ../../Spartan/Classes/FollowersObject.swift; sourceTree = "<group>"; };
+		5CF033761E3ED69F000C97CC /* FollowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowType.swift; path = ../../Spartan/Classes/FollowType.swift; sourceTree = "<group>"; };
+		5CF033771E3ED69F000C97CC /* ItemSearchType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemSearchType.swift; path = ../../Spartan/Classes/ItemSearchType.swift; sourceTree = "<group>"; };
+		5CF033781E3ED69F000C97CC /* LinkedTrackObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkedTrackObject.swift; path = ../../Spartan/Classes/LinkedTrackObject.swift; sourceTree = "<group>"; };
+		5CF033791E3ED69F000C97CC /* PagingObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagingObject.swift; path = ../../Spartan/Classes/PagingObject.swift; sourceTree = "<group>"; };
+		5CF0337A1E3ED69F000C97CC /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Playlist.swift; path = ../../Spartan/Classes/Playlist.swift; sourceTree = "<group>"; };
+		5CF0337B1E3ED69F000C97CC /* PlaylistTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaylistTrack.swift; path = ../../Spartan/Classes/PlaylistTrack.swift; sourceTree = "<group>"; };
+		5CF0337C1E3ED69F000C97CC /* PrivateUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivateUser.swift; path = ../../Spartan/Classes/PrivateUser.swift; sourceTree = "<group>"; };
+		5CF0337D1E3ED69F000C97CC /* PublicUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicUser.swift; path = ../../Spartan/Classes/PublicUser.swift; sourceTree = "<group>"; };
+		5CF0337E1E3ED69F000C97CC /* RecommendationsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecommendationsObject.swift; path = ../../Spartan/Classes/RecommendationsObject.swift; sourceTree = "<group>"; };
+		5CF0337F1E3ED69F000C97CC /* RecommendationsSeedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecommendationsSeedObject.swift; path = ../../Spartan/Classes/RecommendationsSeedObject.swift; sourceTree = "<group>"; };
+		5CF033801E3ED69F000C97CC /* SavedAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedAlbum.swift; path = ../../Spartan/Classes/SavedAlbum.swift; sourceTree = "<group>"; };
+		5CF033811E3ED69F000C97CC /* SavedTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedTrack.swift; path = ../../Spartan/Classes/SavedTrack.swift; sourceTree = "<group>"; };
+		5CF033821E3ED69F000C97CC /* SimplifiedAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimplifiedAlbum.swift; path = ../../Spartan/Classes/SimplifiedAlbum.swift; sourceTree = "<group>"; };
+		5CF033831E3ED69F000C97CC /* SimplifiedArtist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimplifiedArtist.swift; path = ../../Spartan/Classes/SimplifiedArtist.swift; sourceTree = "<group>"; };
+		5CF033841E3ED69F000C97CC /* SimplifiedPlaylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimplifiedPlaylist.swift; path = ../../Spartan/Classes/SimplifiedPlaylist.swift; sourceTree = "<group>"; };
+		5CF033851E3ED69F000C97CC /* SimplifiedTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimplifiedTrack.swift; path = ../../Spartan/Classes/SimplifiedTrack.swift; sourceTree = "<group>"; };
+		5CF033861E3ED69F000C97CC /* SnapshotResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotResponse.swift; path = ../../Spartan/Classes/SnapshotResponse.swift; sourceTree = "<group>"; };
+		5CF033871E3ED69F000C97CC /* Spartan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spartan.swift; path = ../../Spartan/Classes/Spartan.swift; sourceTree = "<group>"; };
+		5CF033881E3ED69F000C97CC /* SpartanBaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanBaseObject.swift; path = ../../Spartan/Classes/SpartanBaseObject.swift; sourceTree = "<group>"; };
+		5CF0338B1E3ED69F000C97CC /* SpartanError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanError.swift; path = ../../Spartan/Classes/SpartanError.swift; sourceTree = "<group>"; };
+		5CF0338C1E3ED69F000C97CC /* SpartanImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanImage.swift; path = ../../Spartan/Classes/SpartanImage.swift; sourceTree = "<group>"; };
+		5CF0338D1E3ED69F000C97CC /* SpartanRequestAdapater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestAdapater.swift; path = ../../Spartan/Classes/SpartanRequestAdapater.swift; sourceTree = "<group>"; };
+		5CF0338E1E3ED69F000C97CC /* SpartanRequestLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestLogger.swift; path = ../../Spartan/Classes/SpartanRequestLogger.swift; sourceTree = "<group>"; };
+		5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestManager.swift; path = ../../Spartan/Classes/SpartanRequestManager.swift; sourceTree = "<group>"; };
+		5CF033901E3ED69F000C97CC /* SpartanURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanURL.swift; path = ../../Spartan/Classes/SpartanURL.swift; sourceTree = "<group>"; };
+		5CF033911E3ED69F000C97CC /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Track.swift; path = ../../Spartan/Classes/Track.swift; sourceTree = "<group>"; };
+		5CF033921E3ED69F000C97CC /* TracksObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TracksObject.swift; path = ../../Spartan/Classes/TracksObject.swift; sourceTree = "<group>"; };
+		5CF033931E3ED69F000C97CC /* TuneableTrackAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TuneableTrackAttribute.swift; path = ../../Spartan/Classes/TuneableTrackAttribute.swift; sourceTree = "<group>"; };
+		5CF033EE1E3ED77C000C97CC /* CopyrightObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CopyrightObject.swift; path = ../../Spartan/Classes/CopyrightObject.swift; sourceTree = "<group>"; };
+		5CF033EF1E3ED77C000C97CC /* CursorsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CursorsObject.swift; path = ../../Spartan/Classes/CursorsObject.swift; sourceTree = "<group>"; };
+		5CF648781E34203300E0702B /* OAuthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthTests.swift; sourceTree = "<group>"; };
+		5CF648A71E3448B300E0702B /* BaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SpartanExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartanExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +180,10 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		62B3E230F88599467808CB46 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5D0367C7FA1F77482FDB65 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F0D202FE17DD4ECA215202B /* Pods_SpartanExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E644F8E2EE9234AC817160B /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A468AA955F2CAE430D18190D /* Pods-SpartanUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanUnitTests/Pods-SpartanUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		A74418BFEFE28DD1E6638234 /* Pods-SpartanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanTests/Pods-SpartanTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6BDEEB8D6A6540481803AD9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -100,11 +194,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5C1261ED1E2C54A1000827C7 /* Frameworks */ = {
+		5C627F2A1E2F14D50042D9BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2090D30B95669846D7F0090 /* Pods_SpartanTests.framework in Frameworks */,
+				55C7EA9C29FF4879F819610E /* Pods_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,38 +222,71 @@
 				A468AA955F2CAE430D18190D /* Pods-SpartanUnitTests.release.xcconfig */,
 				1AE07E5A7B998E1FB8A68B91 /* Pods-SpartanTests.debug.xcconfig */,
 				A74418BFEFE28DD1E6638234 /* Pods-SpartanTests.release.xcconfig */,
+				7D5D0367C7FA1F77482FDB65 /* Pods-Tests.debug.xcconfig */,
+				9E644F8E2EE9234AC817160B /* Pods-Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		5C1261F11E2C54A1000827C7 /* SpartanTests */ = {
+		5C627F2E1E2F14D50042D9BE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				5C1261F21E2C54A1000827C7 /* SpartanTests.swift */,
-				5C1261F41E2C54A1000827C7 /* Info.plist */,
+				5CF648A71E3448B300E0702B /* BaseTests.swift */,
+				5C627F2F1E2F14D50042D9BE /* NonOAuthTests.swift */,
+				5CF648781E34203300E0702B /* OAuthTests.swift */,
+				5C627F311E2F14D50042D9BE /* Info.plist */,
 			);
-			path = SpartanTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		5CFD230F1E2C35BC00C8ED7E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5C2E5DCA1E2C3E6700F87FC4 /* Spartan.swift */,
-				5C2E5DCB1E2C3E6700F87FC4 /* SpartanAlbum.swift */,
-				5C2E5DCC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift */,
-				5C2E5DCD1E2C3E6700F87FC4 /* SpartanError.swift */,
-				5C2E5DCE1E2C3E6700F87FC4 /* SpartanImage.swift */,
-				5C2E5DCF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift */,
-				5C2E5DD01E2C3E6700F87FC4 /* SpartanObject.swift */,
-				5C2E5DD11E2C3E6700F87FC4 /* SpartanPagingObject.swift */,
-				5C2E5DD21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift */,
-				5C2E5DD31E2C3E6700F87FC4 /* SpartanRequestLogger.swift */,
-				5C2E5DD41E2C3E6700F87FC4 /* SpartanRequestManager.swift */,
-				5C2E5DD51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift */,
-				5C2E5DD61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift */,
-				5C2E5DD71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift */,
-				5C2E5DD81E2C3E6700F87FC4 /* SpartanTrack.swift */,
-				5C2E5DD91E2C3E6700F87FC4 /* SpartanURL.swift */,
+				5CF033671E3ED69F000C97CC /* Album.swift */,
+				5CF033681E3ED69F000C97CC /* Artist.swift */,
+				5CF033691E3ED69F000C97CC /* AudioAnalysis.swift */,
+				5CF0336A1E3ED69F000C97CC /* AudioAnalysisBar.swift */,
+				5CF0336B1E3ED69F000C97CC /* AudioAnalysisBeat.swift */,
+				5CF0336C1E3ED69F000C97CC /* AudioAnalysisMeta.swift */,
+				5CF0336D1E3ED69F000C97CC /* AudioAnalysisSection.swift */,
+				5CF0336E1E3ED69F000C97CC /* AudioAnalysisSegment.swift */,
+				5CF0336F1E3ED69F000C97CC /* AudioAnalysisTatum.swift */,
+				5CF033701E3ED69F000C97CC /* AudioAnalysisTrack.swift */,
+				5CF033711E3ED69F000C97CC /* AudioFeaturesObject.swift */,
+				5CF033721E3ED69F000C97CC /* CategoryObject.swift */,
+				5CF033EE1E3ED77C000C97CC /* CopyrightObject.swift */,
+				5CF033731E3ED69F000C97CC /* CountryCode.swift */,
+				5CF033EF1E3ED77C000C97CC /* CursorsObject.swift */,
+				5CF033741E3ED69F000C97CC /* FeaturedPlaylistsObject.swift */,
+				5CF033751E3ED69F000C97CC /* FollowersObject.swift */,
+				5CF033761E3ED69F000C97CC /* FollowType.swift */,
+				5CF033771E3ED69F000C97CC /* ItemSearchType.swift */,
+				5CF033781E3ED69F000C97CC /* LinkedTrackObject.swift */,
+				5CF033791E3ED69F000C97CC /* PagingObject.swift */,
+				5CF0337A1E3ED69F000C97CC /* Playlist.swift */,
+				5CF0337B1E3ED69F000C97CC /* PlaylistTrack.swift */,
+				5CF0337C1E3ED69F000C97CC /* PrivateUser.swift */,
+				5CF0337D1E3ED69F000C97CC /* PublicUser.swift */,
+				5CF0337E1E3ED69F000C97CC /* RecommendationsObject.swift */,
+				5CF0337F1E3ED69F000C97CC /* RecommendationsSeedObject.swift */,
+				5CF033801E3ED69F000C97CC /* SavedAlbum.swift */,
+				5CF033811E3ED69F000C97CC /* SavedTrack.swift */,
+				5CF033821E3ED69F000C97CC /* SimplifiedAlbum.swift */,
+				5CF033831E3ED69F000C97CC /* SimplifiedArtist.swift */,
+				5CF033841E3ED69F000C97CC /* SimplifiedPlaylist.swift */,
+				5CF033851E3ED69F000C97CC /* SimplifiedTrack.swift */,
+				5CF033861E3ED69F000C97CC /* SnapshotResponse.swift */,
+				5CF033871E3ED69F000C97CC /* Spartan.swift */,
+				5CF033881E3ED69F000C97CC /* SpartanBaseObject.swift */,
+				5CF0338B1E3ED69F000C97CC /* SpartanError.swift */,
+				5CF0338C1E3ED69F000C97CC /* SpartanImage.swift */,
+				5CF0338D1E3ED69F000C97CC /* SpartanRequestAdapater.swift */,
+				5CF0338E1E3ED69F000C97CC /* SpartanRequestLogger.swift */,
+				5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */,
+				5CF033901E3ED69F000C97CC /* SpartanURL.swift */,
+				5CF033911E3ED69F000C97CC /* Track.swift */,
+				5CF033921E3ED69F000C97CC /* TracksObject.swift */,
+				5CF033931E3ED69F000C97CC /* TuneableTrackAttribute.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -169,7 +296,7 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Spartan */,
-				5C1261F11E2C54A1000827C7 /* SpartanTests */,
+				5C627F2E1E2F14D50042D9BE /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				38A7E7A1F6C6898B0BF38DAA /* Pods */,
 				F0D4B043E94A169E92919309 /* Frameworks */,
@@ -180,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* SpartanExample.app */,
-				5C1261F01E2C54A1000827C7 /* SpartanTests.xctest */,
+				5C627F2D1E2F14D50042D9BE /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +350,7 @@
 			children = (
 				7F0D202FE17DD4ECA215202B /* Pods_SpartanExample.framework */,
 				F0799769FD03295157DC419D /* Pods_SpartanTests.framework */,
+				62B3E230F88599467808CB46 /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -230,25 +358,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5C1261EF1E2C54A1000827C7 /* SpartanTests */ = {
+		5C627F2C1E2F14D50042D9BE /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C1261F71E2C54A1000827C7 /* Build configuration list for PBXNativeTarget "SpartanTests" */;
+			buildConfigurationList = 5C627F341E2F14D50042D9BE /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				7799E4A9F9C74FAEFB8C622C /* [CP] Check Pods Manifest.lock */,
-				5C1261EC1E2C54A1000827C7 /* Sources */,
-				5C1261ED1E2C54A1000827C7 /* Frameworks */,
-				5C1261EE1E2C54A1000827C7 /* Resources */,
-				ECC745E6AB8C75D66AFC88A5 /* [CP] Embed Pods Frameworks */,
-				C1EB1E4668B9F074E3F494A4 /* [CP] Copy Pods Resources */,
+				EAB650E6C4EB6CEE432D34CD /* [CP] Check Pods Manifest.lock */,
+				5C627F291E2F14D50042D9BE /* Sources */,
+				5C627F2A1E2F14D50042D9BE /* Frameworks */,
+				5C627F2B1E2F14D50042D9BE /* Resources */,
+				EFA43CD47518AFB0D4DE7DDE /* [CP] Embed Pods Frameworks */,
+				9358BFC40ADFF8FACEA9AD81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5C1261F61E2C54A1000827C7 /* PBXTargetDependency */,
+				5C627F331E2F14D50042D9BE /* PBXTargetDependency */,
 			);
-			name = SpartanTests;
-			productName = SpartanTests;
-			productReference = 5C1261F01E2C54A1000827C7 /* SpartanTests.xctest */;
+			name = Tests;
+			productName = Tests;
+			productReference = 5C627F2D1E2F14D50042D9BE /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		607FACCF1AFB9204008FA782 /* SpartanExample */ = {
@@ -281,7 +409,7 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					5C1261EF1E2C54A1000827C7 = {
+					5C627F2C1E2F14D50042D9BE = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 607FACCF1AFB9204008FA782;
@@ -306,13 +434,13 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* SpartanExample */,
-				5C1261EF1E2C54A1000827C7 /* SpartanTests */,
+				5C627F2C1E2F14D50042D9BE /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5C1261EE1E2C54A1000827C7 /* Resources */ = {
+		5C627F2B1E2F14D50042D9BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,21 +475,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanExample/Pods-SpartanExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7799E4A9F9C74FAEFB8C622C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		917188EC069488F4497DB655 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,6 +488,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanExample/Pods-SpartanExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9358BFC40ADFF8FACEA9AD81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B7E659C39AAB391EFAF8BA97 /* [CP] Check Pods Manifest.lock */ = {
@@ -392,22 +520,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C1EB1E4668B9F074E3F494A4 /* [CP] Copy Pods Resources */ = {
+		EAB650E6C4EB6CEE432D34CD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanTests/Pods-SpartanTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		ECC745E6AB8C75D66AFC88A5 /* [CP] Embed Pods Frameworks */ = {
+		EFA43CD47518AFB0D4DE7DDE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,33 +547,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanTests/Pods-SpartanTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5C1261EC1E2C54A1000827C7 /* Sources */ = {
+		5C627F291E2F14D50042D9BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C1261FA1E2C54AE000827C7 /* Spartan.swift in Sources */,
-				5C1261FB1E2C54AE000827C7 /* SpartanAlbum.swift in Sources */,
-				5C1261FC1E2C54AE000827C7 /* SpartanCopyrightObject.swift in Sources */,
-				5C1261FD1E2C54AE000827C7 /* SpartanError.swift in Sources */,
-				5C1261FE1E2C54AE000827C7 /* SpartanImage.swift in Sources */,
-				5C1261FF1E2C54AE000827C7 /* SpartanLinkedTrackObject.swift in Sources */,
-				5C1262001E2C54AE000827C7 /* SpartanObject.swift in Sources */,
-				5C1262011E2C54AE000827C7 /* SpartanPagingObject.swift in Sources */,
-				5C1262021E2C54AE000827C7 /* SpartanRequestAdapater.swift in Sources */,
-				5C1262031E2C54AE000827C7 /* SpartanRequestLogger.swift in Sources */,
-				5C1262041E2C54AE000827C7 /* SpartanRequestManager.swift in Sources */,
-				5C1262051E2C54AE000827C7 /* SpartanSimplifiedAlbum.swift in Sources */,
-				5C1262061E2C54AE000827C7 /* SpartanSimplifiedArtist.swift in Sources */,
-				5C1262071E2C54AE000827C7 /* SpartanSimplifiedTrack.swift in Sources */,
-				5C1262081E2C54AE000827C7 /* SpartanTrack.swift in Sources */,
-				5C1262091E2C54AE000827C7 /* SpartanURL.swift in Sources */,
-				5C1261F31E2C54A1000827C7 /* SpartanTests.swift in Sources */,
+				5CF033F21E3ED785000C97CC /* CopyrightObject.swift in Sources */,
+				5CF033F31E3ED785000C97CC /* CursorsObject.swift in Sources */,
+				5CF033C11E3ED6AB000C97CC /* Album.swift in Sources */,
+				5CF033C21E3ED6AB000C97CC /* Artist.swift in Sources */,
+				5CF033C31E3ED6AB000C97CC /* AudioAnalysis.swift in Sources */,
+				5CF033C41E3ED6AB000C97CC /* AudioAnalysisBar.swift in Sources */,
+				5CF033C51E3ED6AB000C97CC /* AudioAnalysisBeat.swift in Sources */,
+				5CF033C61E3ED6AB000C97CC /* AudioAnalysisMeta.swift in Sources */,
+				5CF033C71E3ED6AB000C97CC /* AudioAnalysisSection.swift in Sources */,
+				5CF033C81E3ED6AB000C97CC /* AudioAnalysisSegment.swift in Sources */,
+				5CF033C91E3ED6AB000C97CC /* AudioAnalysisTatum.swift in Sources */,
+				5CF033CA1E3ED6AB000C97CC /* AudioAnalysisTrack.swift in Sources */,
+				5CF033CB1E3ED6AB000C97CC /* AudioFeaturesObject.swift in Sources */,
+				5CF033CC1E3ED6AB000C97CC /* CategoryObject.swift in Sources */,
+				5CF033CD1E3ED6AB000C97CC /* CountryCode.swift in Sources */,
+				5CF033CE1E3ED6AB000C97CC /* FeaturedPlaylistsObject.swift in Sources */,
+				5CF033CF1E3ED6AB000C97CC /* FollowersObject.swift in Sources */,
+				5CF033D01E3ED6AB000C97CC /* FollowType.swift in Sources */,
+				5CF033D11E3ED6AB000C97CC /* ItemSearchType.swift in Sources */,
+				5CF033D21E3ED6AB000C97CC /* LinkedTrackObject.swift in Sources */,
+				5CF033D31E3ED6AB000C97CC /* PagingObject.swift in Sources */,
+				5CF033D41E3ED6AB000C97CC /* Playlist.swift in Sources */,
+				5CF033D51E3ED6AB000C97CC /* PlaylistTrack.swift in Sources */,
+				5CF033D61E3ED6AB000C97CC /* PrivateUser.swift in Sources */,
+				5CF033D71E3ED6AB000C97CC /* PublicUser.swift in Sources */,
+				5CF033D81E3ED6AB000C97CC /* RecommendationsObject.swift in Sources */,
+				5CF033D91E3ED6AB000C97CC /* RecommendationsSeedObject.swift in Sources */,
+				5CF033DA1E3ED6AB000C97CC /* SavedAlbum.swift in Sources */,
+				5CF033DB1E3ED6AB000C97CC /* SavedTrack.swift in Sources */,
+				5CF033DC1E3ED6AB000C97CC /* SimplifiedAlbum.swift in Sources */,
+				5CF033DD1E3ED6AB000C97CC /* SimplifiedArtist.swift in Sources */,
+				5CF033DE1E3ED6AB000C97CC /* SimplifiedPlaylist.swift in Sources */,
+				5CF033DF1E3ED6AB000C97CC /* SimplifiedTrack.swift in Sources */,
+				5CF033E01E3ED6AB000C97CC /* SnapshotResponse.swift in Sources */,
+				5CF033E11E3ED6AB000C97CC /* Spartan.swift in Sources */,
+				5CF033E21E3ED6AB000C97CC /* SpartanBaseObject.swift in Sources */,
+				5CF033E51E3ED6AB000C97CC /* SpartanError.swift in Sources */,
+				5CF033E61E3ED6AB000C97CC /* SpartanImage.swift in Sources */,
+				5CF033E71E3ED6AB000C97CC /* SpartanRequestAdapater.swift in Sources */,
+				5CF033E81E3ED6AB000C97CC /* SpartanRequestLogger.swift in Sources */,
+				5CF033E91E3ED6AB000C97CC /* SpartanRequestManager.swift in Sources */,
+				5CF033EA1E3ED6AB000C97CC /* SpartanURL.swift in Sources */,
+				5CF033EB1E3ED6AB000C97CC /* Track.swift in Sources */,
+				5CF033EC1E3ED6AB000C97CC /* TracksObject.swift in Sources */,
+				5CF033ED1E3ED6AB000C97CC /* TuneableTrackAttribute.swift in Sources */,
+				5CF648791E34203300E0702B /* OAuthTests.swift in Sources */,
+				5CF648A81E3448B300E0702B /* BaseTests.swift in Sources */,
+				5C627F301E2F14D50042D9BE /* NonOAuthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,34 +612,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C2E5DE11E2C3E6700F87FC4 /* SpartanPagingObject.swift in Sources */,
-				5C2E5DDA1E2C3E6700F87FC4 /* Spartan.swift in Sources */,
+				5CF033F01E3ED77C000C97CC /* CopyrightObject.swift in Sources */,
+				5CF033A61E3ED69F000C97CC /* PagingObject.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				5C2E5DDC1E2C3E6700F87FC4 /* SpartanCopyrightObject.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				5C2E5DDE1E2C3E6700F87FC4 /* SpartanImage.swift in Sources */,
-				5C2E5DE81E2C3E6700F87FC4 /* SpartanTrack.swift in Sources */,
-				5C2E5DDF1E2C3E6700F87FC4 /* SpartanLinkedTrackObject.swift in Sources */,
-				5C2E5DE41E2C3E6700F87FC4 /* SpartanRequestManager.swift in Sources */,
-				5C2E5DE31E2C3E6700F87FC4 /* SpartanRequestLogger.swift in Sources */,
-				5C2E5DE51E2C3E6700F87FC4 /* SpartanSimplifiedAlbum.swift in Sources */,
-				5C2E5DE01E2C3E6700F87FC4 /* SpartanObject.swift in Sources */,
-				5C2E5DE71E2C3E6700F87FC4 /* SpartanSimplifiedTrack.swift in Sources */,
-				5C2E5DE61E2C3E6700F87FC4 /* SpartanSimplifiedArtist.swift in Sources */,
-				5C2E5DDD1E2C3E6700F87FC4 /* SpartanError.swift in Sources */,
-				5C2E5DE91E2C3E6700F87FC4 /* SpartanURL.swift in Sources */,
-				5C2E5DE21E2C3E6700F87FC4 /* SpartanRequestAdapater.swift in Sources */,
-				5C2E5DDB1E2C3E6700F87FC4 /* SpartanAlbum.swift in Sources */,
+				5CF033BD1E3ED69F000C97CC /* SpartanURL.swift in Sources */,
+				5CF033F11E3ED77C000C97CC /* CursorsObject.swift in Sources */,
+				5CF033A81E3ED69F000C97CC /* PlaylistTrack.swift in Sources */,
+				5CF033B41E3ED69F000C97CC /* Spartan.swift in Sources */,
+				5CF0339E1E3ED69F000C97CC /* AudioFeaturesObject.swift in Sources */,
+				5CF033BC1E3ED69F000C97CC /* SpartanRequestManager.swift in Sources */,
+				5CF033B21E3ED69F000C97CC /* SimplifiedTrack.swift in Sources */,
+				5CF0339B1E3ED69F000C97CC /* AudioAnalysisSegment.swift in Sources */,
+				5CF033AE1E3ED69F000C97CC /* SavedTrack.swift in Sources */,
+				5CF033B81E3ED69F000C97CC /* SpartanError.swift in Sources */,
+				5CF033A11E3ED69F000C97CC /* FeaturedPlaylistsObject.swift in Sources */,
+				5CF0339A1E3ED69F000C97CC /* AudioAnalysisSection.swift in Sources */,
+				5CF033BB1E3ED69F000C97CC /* SpartanRequestLogger.swift in Sources */,
+				5CF0339C1E3ED69F000C97CC /* AudioAnalysisTatum.swift in Sources */,
+				5CF033971E3ED69F000C97CC /* AudioAnalysisBar.swift in Sources */,
+				5CF033BF1E3ED69F000C97CC /* TracksObject.swift in Sources */,
+				5CF033B11E3ED69F000C97CC /* SimplifiedPlaylist.swift in Sources */,
+				5CF033A31E3ED69F000C97CC /* FollowType.swift in Sources */,
+				5CF0339D1E3ED69F000C97CC /* AudioAnalysisTrack.swift in Sources */,
+				5CF033AC1E3ED69F000C97CC /* RecommendationsSeedObject.swift in Sources */,
+				5CF033A01E3ED69F000C97CC /* CountryCode.swift in Sources */,
+				5CF033AB1E3ED69F000C97CC /* RecommendationsObject.swift in Sources */,
+				5CF033AD1E3ED69F000C97CC /* SavedAlbum.swift in Sources */,
+				5CF033A21E3ED69F000C97CC /* FollowersObject.swift in Sources */,
+				5CF033A91E3ED69F000C97CC /* PrivateUser.swift in Sources */,
+				5CF033951E3ED69F000C97CC /* Artist.swift in Sources */,
+				5CF033A51E3ED69F000C97CC /* LinkedTrackObject.swift in Sources */,
+				5CF033AA1E3ED69F000C97CC /* PublicUser.swift in Sources */,
+				5CF033961E3ED69F000C97CC /* AudioAnalysis.swift in Sources */,
+				5CF0339F1E3ED69F000C97CC /* CategoryObject.swift in Sources */,
+				5CF033981E3ED69F000C97CC /* AudioAnalysisBeat.swift in Sources */,
+				5CF033C01E3ED69F000C97CC /* TuneableTrackAttribute.swift in Sources */,
+				5CF033BA1E3ED69F000C97CC /* SpartanRequestAdapater.swift in Sources */,
+				5CF033B01E3ED69F000C97CC /* SimplifiedArtist.swift in Sources */,
+				5CF033B51E3ED69F000C97CC /* SpartanBaseObject.swift in Sources */,
+				5CF033B91E3ED69F000C97CC /* SpartanImage.swift in Sources */,
+				5CF033A41E3ED69F000C97CC /* ItemSearchType.swift in Sources */,
+				5CF033A71E3ED69F000C97CC /* Playlist.swift in Sources */,
+				5CF033941E3ED69F000C97CC /* Album.swift in Sources */,
+				5CF033BE1E3ED69F000C97CC /* Track.swift in Sources */,
+				5CF033991E3ED69F000C97CC /* AudioAnalysisMeta.swift in Sources */,
+				5CF033B31E3ED69F000C97CC /* SnapshotResponse.swift in Sources */,
+				5CF033AF1E3ED69F000C97CC /* SimplifiedAlbum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5C1261F61E2C54A1000827C7 /* PBXTargetDependency */ = {
+		5C627F331E2F14D50042D9BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* SpartanExample */;
-			targetProxy = 5C1261F51E2C54A1000827C7 /* PBXContainerItemProxy */;
+			targetProxy = 5C627F321E2F14D50042D9BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -504,18 +692,19 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5C1261F81E2C54A1000827C7 /* Debug */ = {
+		5C627F351E2F14D50042D9BE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AE07E5A7B998E1FB8A68B91 /* Pods-SpartanTests.debug.xcconfig */;
+			baseConfigurationReference = 7D5D0367C7FA1F77482FDB65 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = SpartanTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dalton-Hinterscher.SpartanTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dalton-Hinterscher.Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
@@ -523,17 +712,18 @@
 			};
 			name = Debug;
 		};
-		5C1261F91E2C54A1000827C7 /* Release */ = {
+		5C627F361E2F14D50042D9BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A74418BFEFE28DD1E6638234 /* Pods-SpartanTests.release.xcconfig */;
+			baseConfigurationReference = 9E644F8E2EE9234AC817160B /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				INFOPLIST_FILE = SpartanTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dalton-Hinterscher.SpartanTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dalton-Hinterscher.Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpartanExample.app/SpartanExample";
@@ -660,11 +850,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C1261F71E2C54A1000827C7 /* Build configuration list for PBXNativeTarget "SpartanTests" */ = {
+		5C627F341E2F14D50042D9BE /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C1261F81E2C54A1000827C7 /* Debug */,
-				5C1261F91E2C54A1000827C7 /* Release */,
+				5C627F351E2F14D50042D9BE /* Debug */,
+				5C627F361E2F14D50042D9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

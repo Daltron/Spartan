@@ -18,31 +18,20 @@
 
 import ObjectMapper
 
-public class SpartanSimplifiedTrack: SpartanObject {
+public class Artist: SimplifiedArtist {
     
-    public private(set) var artists: [SpartanSimplifiedArtist]!
-    public private(set) var availableMarkets: [String]!
-    public private(set) var discNumber: Int!
-    public private(set) var durationMs: Int!
-    public private(set) var explicit: Bool!
     public private(set) var externalUrls: [String : String]!
-    public private(set) var isPlayable: Bool!
-    public private(set) var linkedFrom: SpartanLinkedTrackObject?
-    public private(set) var previewUrl: String!
-    public private(set) var trackNumber: Int!
+    public private(set) var followers: FollowersObject!
+    public private(set) var genres: [String]!
+    public private(set) var images: [SpartanImage]!
+    public private(set) var popularity: Int!
     
-    public override func mapping(map: Map) {
+    override public func mapping(map: Map) {
         super.mapping(map: map)
-        artists <- map["artists"]
-        availableMarkets <- map["available_markets"]
-        discNumber <- map["disc_number"]
-        durationMs <- map["duration_ms"]
-        explicit <- map["explicit"]
         externalUrls <- map["external_urls"]
-        isPlayable <- map["is_playable"]
-        linkedFrom <- map["linked_from"]
-        previewUrl <- map["preview_url"]
-        trackNumber <- map["track_number"]
+        followers <- map["followers"]
+        genres <- map["genres"]
+        images <- map["images"]
+        popularity <- map["popularity"]
     }
-
 }

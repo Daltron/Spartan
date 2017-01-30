@@ -22,8 +22,8 @@ import AlamofireObjectMapper
 
 class SpartanRequestManager: NSObject {
 
-    fileprivate static var _manager:Alamofire.SessionManager?
-    class var manager:Alamofire.SessionManager {
+    private static var _manager: Alamofire.SessionManager?
+    class var manager: Alamofire.SessionManager {
         get {
             if _manager == nil {
                 let configuration = URLSessionConfiguration.background(withIdentifier: "\(Bundle.main.bundleIdentifier!).background")
@@ -38,31 +38,58 @@ class SpartanRequestManager: NSObject {
         }
     }
     
-    /*
-     Returns a basic request that each custom request should use. Validates it to make sure the response status code
-     is in the 200-299 range.
-     */
-    
-    fileprivate class func generalRequest(_ method:Alamofire.HTTPMethod, urlString:String, parameters:[String: Any]? = nil) -> DataRequest {
-        let request = manager.request(urlString, method: method, parameters: parameters).validate()
+    private class func generalRequest(_ method: Alamofire.HTTPMethod, urlString: String, parameters: [String: Any]? = nil, encoding: ParameterEncoding = URLEncoding.default) -> DataRequest {
+        let request = manager.request(urlString, method: method, parameters: parameters, encoding: encoding).validate()
         SpartanRequestLogger.logPendingRequest(request: request)
         return request
     }
     
-    class func makeRequestAndMapObject<T: Mappable>(_ method: Alamofire.HTTPMethod, urlString: String, parameters: [String: Any]? = nil, success: ((T) -> Void)?, failure: ((SpartanError) -> Void)?) -> DataRequest {
+    class func makeRequest(_ method: Alamofire.HTTPMethod, urlString: String, parameters: [String: Any]? = nil, encoding: ParameterEncoding = URLEncoding.default, success: (() -> Void)?, failure: ((SpartanError) -> Void)?) -> DataRequest {
+        return generalRequest(method, urlString: urlString, parameters: parameters, encoding: encoding).responseJSON(completionHandler: { (response: DataResponse<Any>) in
+            
+            SpartanRequestLogger.logFinishedRequest(response: response)
+            if response.response!.statusCode >= 200 && response.response!.statusCode <= 299 {
+                if let success = success {
+                    success()
+                }
+            } else {
+                if let failure = failure {
+                    failure(SpartanError.parseSpotifyError(data: response.data, error: response.result.error!))
+                }
+            }
+        })
+    }
+    
+    class func mapBoolArray(_ method: Alamofire.HTTPMethod, urlString: String, parameters: [String: Any]? = nil, success: (([Bool]) -> Void)?, failure: ((SpartanError) -> Void)?) -> DataRequest {
         
-        return generalRequest(method, urlString: urlString, parameters: parameters).responseObject(completionHandler: { (response: DataResponse<T>) in
+        return generalRequest(method, urlString: urlString).responseJSON { response in
+            SpartanRequestLogger.logFinishedRequest(response: response)
+            if response.result.isSuccess {
+                if let success = success {
+                    success(response.result.value! as! [Bool])
+                }
+            } else {
+                if let failure = failure {
+                    failure(SpartanError.parseSpotifyError(data: response.data, error: response.result.error!))
+                }
+            }
+        }
+    }
+
+    class func mapObject<T: Mappable>(_ method: Alamofire.HTTPMethod, urlString: String, keyPath: String? = nil, parameters: [String: Any]? = nil, encoding: ParameterEncoding = URLEncoding.default, success: ((T) -> Void)?, failure: ((SpartanError) -> Void)?) -> DataRequest {
+        
+        return generalRequest(method, urlString: urlString, parameters: parameters, encoding: encoding).responseObject(keyPath: keyPath, completionHandler: { (response: DataResponse<T>) in
             SpartanRequestLogger.logFinishedRequest(response: response)
             switch response.result {
                 case .success:
                     handleSuccessfulResponse(success: success, response: response)
                 case .failure(let error):
-                    handleFailedResponse(error: error, failure: failure)
+                    handleFailedResponse(error: error, response: response, failure: failure)
             }
         })
     }
     
-    class func makeRequestAndMapObjects<T: Mappable>(_ method: Alamofire.HTTPMethod, urlString: String, keyPath: String? = nil, parameters: [String: Any]?, success: (([T]) -> Void)?, failure: ((SpartanError) -> Void)?) -> DataRequest {
+    class func mapObjects<T: Mappable>(_ method: Alamofire.HTTPMethod, urlString: String, keyPath: String? = nil, parameters: [String: Any]? = nil, success: (([T]) -> Void)?, failure: ((SpartanError) -> Void)?) -> DataRequest {
         
         return generalRequest(method, urlString: urlString, parameters: parameters).responseArray(keyPath: keyPath, completionHandler: { (response: DataResponse<[T]>) in
             SpartanRequestLogger.logFinishedRequest(response: response)
@@ -70,27 +97,44 @@ class SpartanRequestManager: NSObject {
                 case .success:
                     handleSuccessfulResponse(success: success, response: response)
                 case .failure(let error):
-                    handleFailedResponse(error: error, failure: failure)
+                    handleFailedResponse(error: error, response: response, failure: failure)
             }
         })
     }
     
-    fileprivate class func handleSuccessfulResponse<T: Mappable>(success:((T) -> Void)?, response:DataResponse<T>) {
+    private class func handleSuccessfulResponse(success: (() -> Void)?, response: DataResponse<Any>) {
+        if let success = success {
+            success()
+        }
+    }
+    
+    private class func handleSuccessfulResponse<T: Mappable>(success: ((T) -> Void)?, response: DataResponse<T>) {
         if let success = success {
             success(response.result.value!)
         }
     }
     
-    fileprivate class func handleSuccessfulResponse<T: Mappable>(success:(([T]) -> Void)?, response:DataResponse<[T]>) {
+    private class func handleSuccessfulResponse<T: Mappable>(success: (([T]) -> Void)?, response: DataResponse<[T]>) {
         if let success = success {
             success(response.result.value!)
         }
     }
     
-    internal class func handleFailedResponse(error:Error, failure:((SpartanError) -> Void)?){
-        let spartanError = SpartanError(error: error)
+    private class func handleFailedResponse(error: Error, response: DataResponse<Any>, failure: ((SpartanError) -> Void)?){
         if let failure = failure {
-            failure(spartanError)
+            failure(SpartanError.parseSpotifyError(data: response.data, error: error, statusCode: response.response?.statusCode))
+        }
+    }
+    
+    private class func handleFailedResponse<T : Mappable>(error: Error, response: DataResponse<T>, failure: ((SpartanError) -> Void)?){
+        if let failure = failure {
+            failure(SpartanError.parseSpotifyError(data: response.data, error: error, statusCode: response.response?.statusCode))
+        }
+    }
+
+    private class func handleFailedResponse<T : Mappable>(error: Error, response: DataResponse<[T]>, failure: ((SpartanError) -> Void)?){
+        if let failure = failure {
+            failure(SpartanError.parseSpotifyError(data: response.data, error: error, statusCode: response.response?.statusCode))
         }
     }
 

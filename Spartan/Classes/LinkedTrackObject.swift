@@ -16,32 +16,15 @@
  
  */
 
-import Alamofire
 import ObjectMapper
 
-public class SpartanObject: Mappable {
+public class LinkedTrackObject: Mappable {
     
-    class var root: String {
-        get { return "undefined" }
-    }
-    
-    var root: String {
-        get { return type(of: self).root }
-    }
-    
-    class var pluralRoot: String {
-        get { return "\(root)s" }
-    }
-    
-    var pluralRoot: String {
-        get { return type(of: self).pluralRoot }
-    }
-
     public private(set) var id: String!
     public private(set) var type: String!
     public private(set) var uri: String!
     public private(set) var href: String!
-    public private(set) var name: String!
+    public private(set) var externalUrls: [String : String]!
     
     public required init?(map: Map) {
         mapping(map: map)
@@ -52,24 +35,7 @@ public class SpartanObject: Mappable {
         type <- map["type"]
         uri <- map["uri"]
         href <- map["href"]
-        name <- map["name"]
-    }
-    
-    class func urlForFind(_ id: String) -> SpartanURL {
-        return SpartanURL("\(pluralRoot)/\(id)")
-    }
-    
-    class func urlForAll() -> SpartanURL {
-        return SpartanURL(pluralRoot)
-    }
-    
-    class func find<T: Mappable>(_ id: String, parameters: [String: Any]? = nil, success: ((T) -> Void)?, failure: ((SpartanError) -> Void)?) -> Request {
-        return SpartanRequestManager.makeRequestAndMapObject(.get, urlString: urlForFind(id).stringValue, success: success, failure: failure)
-    }
-    
-    class func all<T: Mappable>(parameters: [String: Any]? = nil, success: (([T]) -> Void)?, failure: ((SpartanError) -> Void)?) -> Request {
-        return SpartanRequestManager.makeRequestAndMapObjects(.get, urlString: urlForAll().stringValue, keyPath: pluralRoot, parameters: parameters, success: success, failure: failure)
+        externalUrls <- map["external_urls"]
     }
 
-    
 }
