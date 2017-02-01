@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Spartan'
   s.version          = '1.0'
-  s.summary          = 'An elegant Spotify Web API library written in Swift for iOS and macOS'
+  s.summary          = 'An Elegant Spotify Web API Library Written in Swift for iOS and macOS'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
