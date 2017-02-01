@@ -51,7 +51,7 @@ This will download any library dependencies you do not already have in your proj
 ```swift
 public static var authorizationToken: String?
 ```
-This is the token that is included with each request that requires OAuth authentication. If the request you make requires OAuth and this in nil, invalid, or expired, the request will fail.
+This is the token that is included with each request that requires OAuth authentication. If the request you make requires OAuth and this in nil, invalid, or expired, the request will fail. This can be left `nil` if you do not plan on making any requests that require OAuth authentication.
 
 Each time your token is refreshed, simply update it:
 
