@@ -18,7 +18,11 @@
 
 import ObjectMapper
 
-public class SavedTrack: Mappable {
+public class SavedTrack: Mappable, Paginatable {
+    
+    public class var pluralRoot: String {
+        return "items"
+    }
     
     public private(set) var addedAt: String!
     public private(set) var track: Track!

@@ -21,39 +21,41 @@ import Alamofire
 public class Spartan: NSObject {
 
     /* Token that is included with each request that requires OAuth authentication. If the request you 
-    make requies OAuth and this is nil, the response status code will be a 401 Unauthorized
+       make requries OAuth and this is nil, the response status code will be a 401 Unauthorized
      */
     public static var authorizationToken: String?
     
     /* When enabled, will log each network request and its response in the console */
     public static var loggingEnabled: Bool = true
     
-    /* Default country code to use on requests that require one */
-    public static var defaultCountryCode: CountryCode = .us
-    
     
     /* API Documentation: https://developer.spotify.com/web-api/get-album */
     
-    public class func getAlbum(id: String, success: @escaping ((Album) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
-        return Album.find(id, success: success, failure: failure)
+    public class func getAlbum(id: String, market: CountryCode? = nil, success: @escaping ((Album) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
+        
+        var parameters: [String : Any] = [:]
+        checkOptionalParamAddition(paramName: "market", param: market?.rawValue, parameters: &parameters)
+        return Album.find(id, parameters: parameters, success: success, failure: failure)
     }
     
     
     /* API Documentation: https://developer.spotify.com/web-api/get-several-albums */
     
-    public class func getAlbums(ids: [String], success: @escaping (([Album]) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
+    public class func getAlbums(ids: [String], market: CountryCode? = nil, success: @escaping (([Album]) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
         
-        let parameters = ["ids" : ids.joined(separator: ",")]
+        var parameters: [String : Any] = ["ids" : ids.joined(separator: ",")]
+        checkOptionalParamAddition(paramName: "market", param: market?.rawValue, parameters: &parameters)
         return Album.all(parameters: parameters, success: success, failure: failure)
     }
     
     
     /* API Documentation: https://developer.spotify.com/web-api/get-albums-tracks */
     
-    public class func getTracks(albumId:String, limit:Int = 20, offset:Int = 0, success: @escaping ((PagingObject<SimplifiedTrack>) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
+    public class func getTracks(albumId:String, limit:Int = 20, offset:Int = 0, market: CountryCode? = nil, success: @escaping ((PagingObject<SimplifiedTrack>) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
         
         let url = SpartanURL("\(SimplifiedAlbum.pluralRoot)/\(albumId)/\(Track.pluralRoot)")
-        let parameters = ["limit" : limit, "offset" : offset]
+        var parameters: [String : Any] = ["limit" : limit, "offset" : offset]
+        checkOptionalParamAddition(paramName: "market", param: market?.rawValue, parameters: &parameters)
         return SpartanRequestManager.mapObject(.get, urlString: url.stringValue, parameters: parameters, success: success, failure: failure)
     }
     
@@ -76,21 +78,22 @@ public class Spartan: NSObject {
     
     /* API Documentation: https://developer.spotify.com/web-api/get-artists-albums */
     
-    public class func getArtistAlbums(artistId: String, limit:Int = 20, offset:Int = 0, albumTypes: [AlbumType] = [.album, .single, .appearsOn, .compilation], success: @escaping ((PagingObject<SimplifiedAlbum>) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
+    public class func getArtistAlbums(artistId: String, limit:Int = 20, offset:Int = 0, albumTypes: [AlbumType] = [.album, .single, .appearsOn, .compilation], market: CountryCode? = nil, success: @escaping ((PagingObject<SimplifiedAlbum>) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
         
         var albumTypesString: [String] = []
         for type in albumTypes {
             albumTypesString.append(type.rawValue)
         }
         let url = SpartanURL("\(Artist.pluralRoot)/\(artistId)/\(Album.pluralRoot)")
-        let parameters = ["limit" : limit, "offset" : offset, "album_type" : albumTypesString.joined(separator: ",")] as [String : Any]
+        var parameters = ["limit" : limit, "offset" : offset, "album_type" : albumTypesString.joined(separator: ",")] as [String : Any]
+        checkOptionalParamAddition(paramName: "market", param: market?.rawValue, parameters: &parameters)
         return SpartanRequestManager.mapObject(.get, urlString: url.stringValue, parameters: parameters, success: success, failure: failure)
     }
    
     
     /* API Documentation: https://developer.spotify.com/web-api/get-artists-top-tracks */
     
-    public class func getArtistTopTracks(artistId: String, country: CountryCode = Spartan.defaultCountryCode, success: @escaping (([Track]) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
+    public class func getArtistsTopTracks(artistId: String, country: CountryCode, success: @escaping (([Track]) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
         
         let url = SpartanURL("\(Artist.pluralRoot)/\(artistId)/top-tracks")
         let parameters = ["country" : country.rawValue]
@@ -117,6 +120,7 @@ public class Spartan: NSObject {
         return SpartanRequestManager.mapObject(.get, urlString: url.stringValue, keyPath: ItemSearchType.pluralRoot(for: type), parameters: parameters, success: success, failure: failure)
     }
     
+    
     /* API Documentation: https://developer.spotify.com/web-api/get-track */
     
     public class func getTrack(id: String, market: CountryCode? = nil, success: @escaping ((Track) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
@@ -125,6 +129,7 @@ public class Spartan: NSObject {
         checkOptionalParamAddition(paramName: "market", param: market?.rawValue, parameters: &parameters)
         return Track.find(id, parameters: parameters, success: success, failure: failure)
     }
+    
     
     /* API Documentation: https://developer.spotify.com/web-api/get-several-tracks */
     
@@ -278,10 +283,11 @@ public class Spartan: NSObject {
     
     /* API Documentation: https://developer.spotify.com/web-api/follow-playlist */
     
-    public class func followPlaylist(ownerId: String, playlistId: String, success: (() -> Void)?, failure: ((SpartanError) -> Void)?) -> Request {
+    public class func followPlaylist(ownerId: String, playlistId: String, isPublic: Bool = true, success: (() -> Void)?, failure: ((SpartanError) -> Void)?) -> Request {
         
         let url = SpartanURL("users/\(ownerId)/\(Playlist.pluralRoot)/\(playlistId)/followers")
-        return SpartanRequestManager.makeRequest(.put, urlString: url.stringValue, success: success, failure: failure)
+        let parameters: [String : Any] = ["public" : isPublic]
+        return SpartanRequestManager.makeRequest(.put, urlString: url.stringValue, parameters: parameters, success: success, failure: failure)
     }
     
     
@@ -366,6 +372,24 @@ public class Spartan: NSObject {
        
         let url = SpartanURL("me/\(Album.pluralRoot)/contains?ids=\(albumIds.joined(separator: ","))")
         return SpartanRequestManager.mapBoolArray(.get, urlString: url.stringValue, success: success, failure: failure)
+    }
+    
+    
+    /* API Documentation: https://developer.spotify.com/web-api/get-users-top-artists-and-tracks/ */
+    
+    public class func getMyTopArtists(limit: Int = 20, offset: Int = 0, timeRange: TimeRange = .mediumTerm, success: @escaping ((PagingObject<Artist>) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
+        let url = SpartanURL("me/top/\(Artist.pluralRoot)")
+        let parameters: [String : Any] = ["limit" : limit, "offset" : offset, "time_range" : timeRange.rawValue]
+        return SpartanRequestManager.mapObject(.get, urlString: url.stringValue, parameters: parameters, success: success, failure: failure)
+    }
+
+    
+    /* API Documentation: https://developer.spotify.com/web-api/get-users-top-artists-and-tracks/ */
+    
+    public class func getMyTopTracks(limit: Int = 20, offset: Int = 0, timeRange: TimeRange = .mediumTerm, success: @escaping ((PagingObject<Track>) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
+        let url = SpartanURL("me/top/\(Track.pluralRoot)")
+        let parameters: [String : Any] = ["limit" : limit, "offset" : offset, "time_range" : timeRange.rawValue]
+        return SpartanRequestManager.mapObject(.get, urlString: url.stringValue, parameters: parameters, success: success, failure: failure)
     }
     
     

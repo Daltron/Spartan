@@ -1,6 +1,4 @@
 
-import UIKit
-
 public enum CountryCode: String {
     case af = "AF" // Afghanistan
     case ax = "AX" // Ãland Islands

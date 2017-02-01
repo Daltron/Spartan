@@ -152,7 +152,7 @@ class NonOAuthTests: BaseTests {
     
     func testThatGetArtistTopTracksCorrectlyMapsTracksForArtistWithGivenId() {
        
-        _ = Spartan.getArtistTopTracks(artistId: ARTIST_ID, success: { (tracks) in
+        _ = Spartan.getArtistsTopTracks(artistId: ARTIST_ID, country: .us, success: { (tracks) in
             self.validationExpectation.fulfill()
             XCTAssert(tracks.count >= 1)
         }, failure: { (error) in

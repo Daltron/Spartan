@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Spartan'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of Spartan.'
+  s.version          = '1.0'
+  s.summary          = 'An elegant Spotify Web API library written in Swift for iOS and macOS'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,18 +17,16 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/Spartan'
+  s.description      = 'Spartan is a lightweight, elegant, and easy to use Spotify Web API wrapper library for iOS written in Swift 3. Under the hood, Spartan makes request to the Spotify Web API. Those requests are then turned into clean, friendly, and easy to use objects.'
+  s.homepage         = 'https://github.com/daltron/Spartan'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'dhint4' => 'daltonhint4@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/Spartan.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/daltron/Spartan.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
+  s.osx.deployment_target = '10.11'
 
   s.source_files = 'Spartan/Classes/**/*'
   

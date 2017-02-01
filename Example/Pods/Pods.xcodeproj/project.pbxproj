@@ -45,6 +45,8 @@
 		5C999EFF1E3AF9D8005D54A3 /* TuneableTrackAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C999EFE1E3AF9D8005D54A3 /* TuneableTrackAttribute.swift */; };
 		5C999F061E3D68E3005D54A3 /* PlaylistTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C999F051E3D68E3005D54A3 /* PlaylistTrack.swift */; };
 		5CF033631E3EC083000C97CC /* SnapshotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033621E3EC083000C97CC /* SnapshotResponse.swift */; };
+		5CF033F51E415A5A000C97CC /* TimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033F41E415A5A000C97CC /* TimeRange.swift */; };
+		5CF033FA1E417911000C97CC /* Paginatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033F91E417911000C97CC /* Paginatable.swift */; };
 		5CF6487B1E34209900E0702B /* PrivateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6487A1E34209900E0702B /* PrivateUser.swift */; };
 		5CF648801E343AC600E0702B /* AudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6487F1E343AC600E0702B /* AudioAnalysis.swift */; };
 		5CF648821E343DAE00E0702B /* AudioAnalysisBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF648811E343DAE00E0702B /* AudioAnalysisBar.swift */; };
@@ -268,6 +270,8 @@
 		5C999EFE1E3AF9D8005D54A3 /* TuneableTrackAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuneableTrackAttribute.swift; sourceTree = "<group>"; };
 		5C999F051E3D68E3005D54A3 /* PlaylistTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTrack.swift; sourceTree = "<group>"; };
 		5CF033621E3EC083000C97CC /* SnapshotResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotResponse.swift; sourceTree = "<group>"; };
+		5CF033F41E415A5A000C97CC /* TimeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeRange.swift; sourceTree = "<group>"; };
+		5CF033F91E417911000C97CC /* Paginatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paginatable.swift; sourceTree = "<group>"; };
 		5CF6487A1E34209900E0702B /* PrivateUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateUser.swift; sourceTree = "<group>"; };
 		5CF6487F1E343AC600E0702B /* AudioAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioAnalysis.swift; sourceTree = "<group>"; };
 		5CF648811E343DAE00E0702B /* AudioAnalysisBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioAnalysisBar.swift; sourceTree = "<group>"; };
@@ -586,6 +590,7 @@
 				5CF648CE1E3574A200E0702B /* FollowType.swift */,
 				5C627F661E3324EE0042D9BE /* ItemSearchType.swift */,
 				606E6640D58067E2F1AA33C083D8E0D4 /* LinkedTrackObject.swift */,
+				5CF033F91E417911000C97CC /* Paginatable.swift */,
 				DDE26DE2F33D5A123B736066B5863E4B /* PagingObject.swift */,
 				5CF648B01E35537A00E0702B /* Playlist.swift */,
 				5C999F051E3D68E3005D54A3 /* PlaylistTrack.swift */,
@@ -608,6 +613,7 @@
 				AD93A07ED72DA966A69B6548261D73CF /* SpartanRequestLogger.swift */,
 				1C07732C8397460856198F8CE1619984 /* SpartanRequestManager.swift */,
 				8DCCCB7DF17FD1F1726DC2622A2EFC64 /* SpartanURL.swift */,
+				5CF033F41E415A5A000C97CC /* TimeRange.swift */,
 				ED81F75F3667480C11C096D3B512E844 /* Track.swift */,
 				5C627F721E332C190042D9BE /* TracksObject.swift */,
 				5C999EFE1E3AF9D8005D54A3 /* TuneableTrackAttribute.swift */,
@@ -1029,6 +1035,7 @@
 				5CF648B11E35537A00E0702B /* Playlist.swift in Sources */,
 				5CF6488C1E343E2B00E0702B /* AudioAnalysisTatum.swift in Sources */,
 				ED990DD489EC4AA36FE39BA983398624 /* SpartanRequestLogger.swift in Sources */,
+				5CF033FA1E417911000C97CC /* Paginatable.swift in Sources */,
 				5EC5CE54EA5AD1F123F9D7CBFFF167FA /* SpartanRequestManager.swift in Sources */,
 				EA859ACA2B8AA647F8C3DDA8432EB41F /* SimplifiedAlbum.swift in Sources */,
 				9E60BFF9A71C5FE25F3F705354650194 /* SimplifiedArtist.swift in Sources */,
@@ -1038,6 +1045,7 @@
 				E3707D73A278ECE702ABBFAB5DAB754F /* Track.swift in Sources */,
 				5C627F711E332A5E0042D9BE /* PublicUser.swift in Sources */,
 				5C627F671E3324EE0042D9BE /* ItemSearchType.swift in Sources */,
+				5CF033F51E415A5A000C97CC /* TimeRange.swift in Sources */,
 				70070BAD3FC3AC2C10E4CDFA28905474 /* SpartanURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

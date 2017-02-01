@@ -16,9 +16,10 @@
  
  */
 
+import Alamofire
 import ObjectMapper
 
-public class PagingObject<T: Mappable> : Mappable  {
+public class PagingObject<T: Paginatable> : Mappable  {
     
     public private(set) var href: String!
     public private(set) var items: [T]!
@@ -28,6 +29,14 @@ public class PagingObject<T: Mappable> : Mappable  {
     public private(set) var previous: String?
     public private(set) var total: Int!
     public private(set) var cursors: CursorsObject?
+    
+    public var canMakeNextRequest: Bool {
+        return next != nil
+    }
+    
+    public var canMakePreviousRequest: Bool {
+        return previous != nil
+    }
     
     public required init?(map: Map) {
         mapping(map: map)
@@ -42,5 +51,33 @@ public class PagingObject<T: Mappable> : Mappable  {
         previous <- map["previous"]
         total <- map["total"]
         cursors <- map["cursors"]
+    }
+    
+    public func getNext(success: @escaping ((PagingObject<T>) -> Void), failure: ((SpartanError) -> Void)?) -> Request? {
+        
+        if let next = next {
+            return SpartanRequestManager.mapObject(.get, urlString: next, keyPath: T.pluralRoot, success: success, failure: failure)
+        } else {
+            if let failure = failure {
+                let error = SpartanError(errorType: .other, errorMessage: "PagingObject does not have a next URL")
+                failure(error)
+            }
+        }
+        
+        return nil
+    }
+    
+    public func getPrevious(success: @escaping ((PagingObject<T>) -> Void), failure: ((SpartanError) -> Void)?) -> Request? {
+        
+        if let previous = previous {
+            return SpartanRequestManager.mapObject(.get, urlString: previous, keyPath: T.pluralRoot, success: success, failure: failure)
+        } else {
+            if let failure = failure {
+                let error = SpartanError(errorType: .other, errorMessage: "PagingObject does not have a previous URL")
+                failure(error)
+            }
+        }
+        
+        return nil
     }
 }

@@ -26,7 +26,7 @@ class SpartanRequestLogger: NSObject {
         if Spartan.loggingEnabled {
             let method = request.request!.httpMethod!
             let urlString = request.request!.url!.absoluteString
-            print("💙 \(LOGGER_PREFIX) \(method) \(sanitizedUrlString(urlString: urlString))")
+            print("🔵 \(LOGGER_PREFIX) \(method) \(sanitizedUrlString(urlString: urlString))")
         }
     }
     
@@ -47,9 +47,9 @@ class SpartanRequestLogger: NSObject {
     
     private class func emoji(for statusCode:Int) -> String {
         if statusCode >= 200 && statusCode <= 299 {
-            return "💚"
+            return "⚪️"
         } else {
-            return "❤️"
+            return "🔴"
         }
     }
     

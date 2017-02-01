@@ -32,13 +32,19 @@ public class SpartanError: NSObject, Mappable {
     }
     
     private var statusCode: Int!
-    public private(set) var errorMessage: String!
     public private(set) var errorType: SpartanErrorType!
+    public private(set) var errorMessage: String!
     
     init(error: Error) {
         super.init()
         errorMessage = error.localizedDescription
         determineErrorType(statusCode: (error as NSError).code)
+    }
+    
+    init(errorType: SpartanErrorType, errorMessage: String) {
+        super.init()
+        self.errorType = errorType
+        self.errorMessage = errorMessage
     }
     
     required public init?(map: Map) {

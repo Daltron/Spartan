@@ -1,3 +1,4 @@
+
 /*
  
  The MIT License (MIT)
@@ -16,23 +17,8 @@
  
  */
 
-import ObjectMapper
-
-public class SavedAlbum: Mappable, Paginatable {
-    
-    public class var pluralRoot: String {
-        return "items"
-    }
-
-    public private(set) var addedAt: String!
-    public private(set) var album: Album!
-    
-    public required init?(map: Map) {
-        mapping(map: map)
-    }
-    
-    public func mapping(map: Map) {
-        addedAt <- map["added_at"]
-        album <- map["album"]
-    }
+public enum TimeRange: String {
+    case shortTerm = "short_term"
+    case mediumTerm = "medium_term"
+    case longTerm = "long_term"
 }

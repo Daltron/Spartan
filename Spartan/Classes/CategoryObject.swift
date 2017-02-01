@@ -18,13 +18,13 @@
 
 import ObjectMapper
 
-public class CategoryObject: Mappable {
+public class CategoryObject: Mappable, Paginatable {
     
     class var root: String {
         return "category"
     }
     
-    class var pluralRoot: String {
+    public class var pluralRoot: String {
         return "categories"
     }
     

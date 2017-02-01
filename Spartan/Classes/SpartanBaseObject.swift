@@ -19,7 +19,7 @@
 import Alamofire
 import ObjectMapper
 
-public class SpartanBaseObject: Mappable {
+public class SpartanBaseObject: Paginatable {
     
     class var root: String {
         get { return "undefined" }
@@ -29,7 +29,7 @@ public class SpartanBaseObject: Mappable {
         get { return type(of: self).root }
     }
     
-    class var pluralRoot: String {
+    public class var pluralRoot: String {
         get { return "\(root)s" }
     }
     

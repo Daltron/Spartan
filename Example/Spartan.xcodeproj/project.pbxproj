@@ -99,6 +99,10 @@
 		5CF033F11E3ED77C000C97CC /* CursorsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033EF1E3ED77C000C97CC /* CursorsObject.swift */; };
 		5CF033F21E3ED785000C97CC /* CopyrightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033EE1E3ED77C000C97CC /* CopyrightObject.swift */; };
 		5CF033F31E3ED785000C97CC /* CursorsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033EF1E3ED77C000C97CC /* CursorsObject.swift */; };
+		5CF033F71E415AA5000C97CC /* TimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033F61E415AA5000C97CC /* TimeRange.swift */; };
+		5CF033F81E415AAD000C97CC /* TimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033F61E415AA5000C97CC /* TimeRange.swift */; };
+		5CF033FC1E41799C000C97CC /* Paginatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033FB1E41799C000C97CC /* Paginatable.swift */; };
+		5CF033FD1E4179A3000C97CC /* Paginatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033FB1E41799C000C97CC /* Paginatable.swift */; };
 		5CF648791E34203300E0702B /* OAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF648781E34203300E0702B /* OAuthTests.swift */; };
 		5CF648A81E3448B300E0702B /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF648A71E3448B300E0702B /* BaseTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -171,6 +175,8 @@
 		5CF033931E3ED69F000C97CC /* TuneableTrackAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TuneableTrackAttribute.swift; path = ../../Spartan/Classes/TuneableTrackAttribute.swift; sourceTree = "<group>"; };
 		5CF033EE1E3ED77C000C97CC /* CopyrightObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CopyrightObject.swift; path = ../../Spartan/Classes/CopyrightObject.swift; sourceTree = "<group>"; };
 		5CF033EF1E3ED77C000C97CC /* CursorsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CursorsObject.swift; path = ../../Spartan/Classes/CursorsObject.swift; sourceTree = "<group>"; };
+		5CF033F61E415AA5000C97CC /* TimeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeRange.swift; path = ../../Spartan/Classes/TimeRange.swift; sourceTree = "<group>"; };
+		5CF033FB1E41799C000C97CC /* Paginatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Paginatable.swift; path = ../../Spartan/Classes/Paginatable.swift; sourceTree = "<group>"; };
 		5CF648781E34203300E0702B /* OAuthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthTests.swift; sourceTree = "<group>"; };
 		5CF648A71E3448B300E0702B /* BaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SpartanExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartanExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +268,7 @@
 				5CF033761E3ED69F000C97CC /* FollowType.swift */,
 				5CF033771E3ED69F000C97CC /* ItemSearchType.swift */,
 				5CF033781E3ED69F000C97CC /* LinkedTrackObject.swift */,
+				5CF033FB1E41799C000C97CC /* Paginatable.swift */,
 				5CF033791E3ED69F000C97CC /* PagingObject.swift */,
 				5CF0337A1E3ED69F000C97CC /* Playlist.swift */,
 				5CF0337B1E3ED69F000C97CC /* PlaylistTrack.swift */,
@@ -284,6 +291,7 @@
 				5CF0338E1E3ED69F000C97CC /* SpartanRequestLogger.swift */,
 				5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */,
 				5CF033901E3ED69F000C97CC /* SpartanURL.swift */,
+				5CF033F61E415AA5000C97CC /* TimeRange.swift */,
 				5CF033911E3ED69F000C97CC /* Track.swift */,
 				5CF033921E3ED69F000C97CC /* TracksObject.swift */,
 				5CF033931E3ED69F000C97CC /* TuneableTrackAttribute.swift */,
@@ -557,6 +565,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF033FD1E4179A3000C97CC /* Paginatable.swift in Sources */,
+				5CF033F81E415AAD000C97CC /* TimeRange.swift in Sources */,
 				5CF033F21E3ED785000C97CC /* CopyrightObject.swift in Sources */,
 				5CF033F31E3ED785000C97CC /* CursorsObject.swift in Sources */,
 				5CF033C11E3ED6AB000C97CC /* Album.swift in Sources */,
@@ -618,6 +628,7 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				5CF033BD1E3ED69F000C97CC /* SpartanURL.swift in Sources */,
 				5CF033F11E3ED77C000C97CC /* CursorsObject.swift in Sources */,
+				5CF033F71E415AA5000C97CC /* TimeRange.swift in Sources */,
 				5CF033A81E3ED69F000C97CC /* PlaylistTrack.swift in Sources */,
 				5CF033B41E3ED69F000C97CC /* Spartan.swift in Sources */,
 				5CF0339E1E3ED69F000C97CC /* AudioFeaturesObject.swift in Sources */,
@@ -648,6 +659,7 @@
 				5CF0339F1E3ED69F000C97CC /* CategoryObject.swift in Sources */,
 				5CF033981E3ED69F000C97CC /* AudioAnalysisBeat.swift in Sources */,
 				5CF033C01E3ED69F000C97CC /* TuneableTrackAttribute.swift in Sources */,
+				5CF033FC1E41799C000C97CC /* Paginatable.swift in Sources */,
 				5CF033BA1E3ED69F000C97CC /* SpartanRequestAdapater.swift in Sources */,
 				5CF033B01E3ED69F000C97CC /* SimplifiedArtist.swift in Sources */,
 				5CF033B51E3ED69F000C97CC /* SpartanBaseObject.swift in Sources */,
