@@ -7,7 +7,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/Spartan.svg?style=flat)](http://cocoapods.org/pods/Spartan)
 
 ## Written in Swift 3
-Spartan is a lightweight, elegant, and easy to use Spotify Web API wrapper library for iOS written in Swift 3. Under the hood, Spartan makes request to the Spotify Web API. Those requests are then turned into clean, friendly, and easy to use objects.
+Spartan is a lightweight, elegant, and easy to use Spotify Web API wrapper library for iOS and macOS written in Swift 3. Under the hood, Spartan makes request to the Spotify Web API. Those requests are then turned into clean, friendly, and easy to use objects.
 
 ### What this library allows you to do:
 - ✅ Make any request that the Spotify Web API allows.
