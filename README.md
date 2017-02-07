@@ -707,7 +707,7 @@ _ = Spartan.getUsersAreFollowingPlaylists(ownerId: ownerId, playlistId: playlist
 SpartanError objects have a type and error message to help determine what kind of error occurred.
 
 ```swift
-public class BigBoardError: NSObject, Mappable {
+public class SpartanError: NSObject, Mappable {
     private(set) open var type: SpartanErrorType!
     private(set) open var errorMessage:String!
 }
