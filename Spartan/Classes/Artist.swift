@@ -22,7 +22,7 @@ public class Artist: SimplifiedArtist {
     
     public private(set) var externalUrls: [String : String]!
     public private(set) var followers: FollowersObject!
-    public private(set) var genres: [String]!
+    public private(set) var genres: [String]?
     public private(set) var images: [SpartanImage]!
     public private(set) var popularity: Int!
     

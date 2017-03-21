@@ -31,7 +31,7 @@ class OAuthTests: BaseTests {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         Spartan.loggingEnabled = true
-        Spartan.authorizationToken = "BQDajabF6JE2OGMUkTj5Fg6jlIPRMRbeA25DIqd-EGUyClfSabf7qixeD6sIugJHuy_UOgwQuwIZXSMsJMWAS8B6faSPT85rGrHuWIzC57QaTVi5wpKyBaOG0M0xVLihaTrmDO5GGt3OrNVQlXs3pcgz1QxR4BLZDWK7oVfOA3ioUYEvJO-I-szpxmLl3WtMKUdYTGCmwfVrIv9MTtfnTVxAV458lCUJaclNH6ydDAAIa_1FXDIOno1N8Jv1R200mkwLA0VilkQGS5kimLyZS16_fg6-AJgb5scSF3ck4uaTPayDEmHWopAS"
+        Spartan.authorizationToken = "BQBPg6KM06ty__6Oe6CY-Om5Zc7HOfBeLAcM-v-dZ50vLuHzoWxolGbfGyyJog3Yxd4F1hapoGhnGKm3PV8wtA43s794kBlOhkqE2dKs6hmHu1HVNG5k7_DDBMvKi1e668sUvNU4D-YHj25RrkFpdWXKFOabbXNFM46LVu7PrtHsy4yjG5dARl8xxKcgPTfzlI2UVPfgAyMBZbdF5BKwlP2Zcn4rV_OtJ0m95-LApp2l56TqH5GT20_gApppje9T5zCkGIPC6MLHPJEFK3SvtTw9516f30xHxk2KNaZKDQlMPx77P4fFVDBi"
     }
     
     func testThatGetAudioAnalysisRequestCorrectlyMapsAudioAnalysisForGivenTrackIdWithAuthorizationToken() {

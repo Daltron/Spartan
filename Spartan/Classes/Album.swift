@@ -22,7 +22,7 @@ public class Album: SimplifiedAlbum {
     
     public private(set) var copyrights: [CopyrightObject]!
     public private(set) var externalIds: [String : String]!
-    public private(set) var genres: [String]!
+    public private(set) var genres: [String]?
     public private(set) var label: String!
     public private(set) var popularity: Int!
     public private(set) var releaseDate: String!

@@ -202,7 +202,6 @@ class NonOAuthTests: BaseTests {
         waitForRequestToFinish()
     }
 
-    
     func testThatSearchCorrectlyMapsForPlaylistItemSearchType() {
         
         _ = Spartan.search(query: SEARCH_TERM, type: .playlist, success: { (pagingObject: PagingObject<SimplifiedPlaylist>) in
