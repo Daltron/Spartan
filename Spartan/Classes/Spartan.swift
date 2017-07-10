@@ -69,7 +69,7 @@ public class Spartan: NSObject {
     
     /* API Documentation: https://developer.spotify.com/web-api/get-several-artists */
     
-    public class func getArtists(ids: [String], success: @escaping (([Album]) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
+    public class func getArtists(ids: [String], success: @escaping (([Artist]) -> Void), failure: ((SpartanError) -> Void)?) -> Request {
         
         let parameters = ["ids" : ids.joined(separator: ",")]
         return Artist.all(parameters: parameters, success: success, failure: failure)

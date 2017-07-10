@@ -56,7 +56,7 @@ public class PagingObject<T: Paginatable> : Mappable  {
     public func getNext(success: @escaping ((PagingObject<T>) -> Void), failure: ((SpartanError) -> Void)?) -> Request? {
         
         if let next = next {
-            return SpartanRequestManager.mapObject(.get, urlString: next, keyPath: T.pluralRoot, success: success, failure: failure)
+            return SpartanRequestManager.mapObject(.get, urlString: next, success: success, failure: failure)
         } else {
             if let failure = failure {
                 let error = SpartanError(errorType: .other, errorMessage: "PagingObject does not have a next URL")
@@ -70,7 +70,7 @@ public class PagingObject<T: Paginatable> : Mappable  {
     public func getPrevious(success: @escaping ((PagingObject<T>) -> Void), failure: ((SpartanError) -> Void)?) -> Request? {
         
         if let previous = previous {
-            return SpartanRequestManager.mapObject(.get, urlString: previous, keyPath: T.pluralRoot, success: success, failure: failure)
+            return SpartanRequestManager.mapObject(.get, urlString: previous, success: success, failure: failure)
         } else {
             if let failure = failure {
                 let error = SpartanError(errorType: .other, errorMessage: "PagingObject does not have a previous URL")

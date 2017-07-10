@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		55C7EA9C29FF4879F819610E /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B3E230F88599467808CB46 /* Pods_Tests.framework */; };
-		5C627F301E2F14D50042D9BE /* NonOAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C627F2F1E2F14D50042D9BE /* NonOAuthTests.swift */; };
 		5CF033941E3ED69F000C97CC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033671E3ED69F000C97CC /* Album.swift */; };
 		5CF033951E3ED69F000C97CC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033681E3ED69F000C97CC /* Artist.swift */; };
 		5CF033961E3ED69F000C97CC /* AudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033691E3ED69F000C97CC /* AudioAnalysis.swift */; };
@@ -128,7 +127,6 @@
 		1AE07E5A7B998E1FB8A68B91 /* Pods-SpartanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpartanTests/Pods-SpartanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		579B6923694B30A7521FAACD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5C627F2D1E2F14D50042D9BE /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C627F2F1E2F14D50042D9BE /* NonOAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonOAuthTests.swift; sourceTree = "<group>"; };
 		5C627F311E2F14D50042D9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CF033671E3ED69F000C97CC /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../../Spartan/Classes/Album.swift; sourceTree = "<group>"; };
 		5CF033681E3ED69F000C97CC /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = ../../Spartan/Classes/Artist.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				5CF648A71E3448B300E0702B /* BaseTests.swift */,
-				5C627F2F1E2F14D50042D9BE /* NonOAuthTests.swift */,
 				5CF648781E34203300E0702B /* OAuthTests.swift */,
 				5C627F311E2F14D50042D9BE /* Info.plist */,
 			);
@@ -614,7 +611,6 @@
 				5CF033ED1E3ED6AB000C97CC /* TuneableTrackAttribute.swift in Sources */,
 				5CF648791E34203300E0702B /* OAuthTests.swift in Sources */,
 				5CF648A81E3448B300E0702B /* BaseTests.swift in Sources */,
-				5C627F301E2F14D50042D9BE /* NonOAuthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
