@@ -16,58 +16,39 @@
  
  */
 
-import Alamofire
+import AlamoRecord
 import ObjectMapper
 
-public class SpartanBaseObject: Paginatable {
-    
-    class var root: String {
-        get { return "undefined" }
-    }
-    
-    var root: String {
-        get { return type(of: self).root }
-    }
-    
-    public class var pluralRoot: String {
-        get { return "\(root)s" }
-    }
-    
-    var pluralRoot: String {
-        get { return type(of: self).pluralRoot }
-    }
+public class SpartanBaseObject: AlamoRecordObject<SpartanURL, SpartanError>, Paginatable {
 
-    public private(set) var id: String!
+    override public class var requestManager: SpartanRequestManager {
+        return SpartanRequestManager.default
+    }
+    
+    override public var requestManager: RequestManager<SpartanURL, SpartanError> {
+        return Swift.type(of: self).requestManager
+    }
+    
+    override public class var pluralKeyPath: String? {
+        return pluralRoot
+    }
+    
+    override public var pluralKeyPath: String? {
+        return Swift.type(of: self).pluralKeyPath
+    }
+    
     public private(set) var type: String!
     public private(set) var uri: String!
     public private(set) var href: String?
     
     public required init?(map: Map) {
-        mapping(map: map)
+        super.init(map: map)
     }
     
-    public func mapping(map: Map) {
-        id <- map["id"]
+    override public func mapping(map: Map) {
+        super.mapping(map: map)
         type <- map["type"]
         uri <- map["uri"]
         href <- map["href"]
     }
-    
-    class func urlForFind(_ id: String) -> SpartanURL {
-        return SpartanURL("\(pluralRoot)/\(id)")
-    }
-    
-    class func urlForAll() -> SpartanURL {
-        return SpartanURL(pluralRoot)
-    }
-    
-    class func find<T: Mappable>(_ id: String, parameters: [String: Any]? = nil, success: ((T) -> Void)?, failure: ((SpartanError) -> Void)?) -> Request {
-        return SpartanRequestManager.mapObject(.get, urlString: urlForFind(id).stringValue, success: success, failure: failure)
-    }
-    
-    class func all<T: Mappable>(parameters: [String: Any]? = nil, success: (([T]) -> Void)?, failure: ((SpartanError) -> Void)?) -> Request {
-        return SpartanRequestManager.mapObjects(.get, urlString: urlForAll().stringValue, keyPath: pluralRoot, parameters: parameters, success: success, failure: failure)
-    }
-
-    
 }

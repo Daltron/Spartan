@@ -1,7 +1,7 @@
 /*
  
  The MIT License (MIT)
- Copyright (c) 2017 Dalton Hinterscher
+ Copyright (c) 2017 Tunespeak
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
  to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -16,19 +16,31 @@
  
  */
 
-import Alamofire
+import ObjectMapper
 
-class SpartanRequestAdapater: RequestAdapter {
+class ErrorParser: NSObject {
 
-    public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        var urlRequest = urlRequest
+    /*
+        Parses a failed request into an instance of an AlamoRecordError
+        - parameter data: The data of the failed request
+        - parameter error: The error of the failed request
+     */
+    open class func parse<E: AlamoRecordError>(_ data: Data?, error: NSError) -> E {
         
-        if let authorizationToken = Spartan.authorizationToken {
-            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            urlRequest.addValue("Bearer \(authorizationToken)", forHTTPHeaderField: "Authorization")
+        guard let data = data else {
+            return E(nsError: error)
         }
-       
-        return urlRequest
+        
+        do {
+            let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+            if let json = json as? [String: Any] {
+                return Mapper<E>().map(JSON: json)!
+            } else {
+                return E(nsError: error)
+            }
+        } catch (_) {
+            return E(nsError: error)
+        }
     }
-
+    
 }

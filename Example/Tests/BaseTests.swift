@@ -12,10 +12,10 @@ class BaseTests: XCTestCase {
     
     internal var validationExpectation: XCTestExpectation!
     
-    internal let ALBUM_ID = "0sNOF9WDwhWunNAHPD3Baj"
-    internal let ARTIST_ID = "0OdUWJ0sBjDrqHygGUXeCF"
-    internal let TRACK_ID = "3TwtrR1yNLY1PMPsrGQpOp"
-    internal let SEARCH_TERM = "Five For Fighting"
+    internal let albumId = "0sNOF9WDwhWunNAHPD3Baj"
+    internal let artistId = "0OdUWJ0sBjDrqHygGUXeCF"
+    internal let trackId = "3TwtrR1yNLY1PMPsrGQpOp"
+    internal let searchTerm = "Five For Fighting"
     
     override func setUp() {
         super.setUp()

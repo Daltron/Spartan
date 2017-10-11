@@ -20,12 +20,12 @@ import ObjectMapper
 
 public class SimplifiedPlaylist: SpartanBaseObject {
     
-    override class var root: String {
+    override public class var root: String {
         return "playlist"
     }
 
     public private(set) var isCollaborative: Bool!
-    public private(set) var externalUrls: [String : String]!
+    public private(set) var externalUrls: [String: String]!
     public private(set) var images: [SpartanImage]!
     public private(set) var owner: PublicUser!
     public private(set) var isPublic: Bool?

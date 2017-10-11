@@ -1,0 +1,6 @@
+framework module AlamoRecord {
+  umbrella header "AlamoRecord-umbrella.h"
+
+  export *
+  module * { export * }
+}

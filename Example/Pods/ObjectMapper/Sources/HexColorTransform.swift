@@ -8,10 +8,11 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
-#else
+#elseif os(macOS)
 import Cocoa
 #endif
 
+#if os(iOS) || os(tvOS) || os(watchOS) || os(macOS)
 open class HexColorTransform: TransformType {
 	
 	#if os(iOS) || os(tvOS) || os(watchOS)
@@ -35,7 +36,7 @@ open class HexColorTransform: TransformType {
 		if let rgba = value as? String {
 			if rgba.hasPrefix("#") {
 				let index = rgba.characters.index(rgba.startIndex, offsetBy: 1)
-				let hex = rgba.substring(from: index)
+				let hex = String(rgba[index...])
 				return getColor(hex: hex)
 			} else {
 				return getColor(hex: rgba)
@@ -53,10 +54,20 @@ open class HexColorTransform: TransformType {
 	
 	fileprivate func hexString(color: Object) -> String {
 		let comps = color.cgColor.components!
-		let r = Int(comps[0] * 255)
-		let g = Int(comps[1] * 255)
-		let b = Int(comps[2] * 255)
-		let a = Int(comps[3] * 255)
+		let compsCount = color.cgColor.numberOfComponents
+		let r: Int
+		let g: Int
+		var b: Int
+		let a = Int(comps[compsCount - 1] * 255)
+		if compsCount == 4 { // RGBA
+			r = Int(comps[0] * 255)
+			g = Int(comps[1] * 255)
+			b = Int(comps[2] * 255)
+		} else { // Grayscale
+			r = Int(comps[0] * 255)
+			g = Int(comps[0] * 255)
+			b = Int(comps[0] * 255)
+		}
 		var hexString: String = ""
 		if prefix {
 			hexString = "#"
@@ -112,4 +123,4 @@ open class HexColorTransform: TransformType {
 		#endif
 	}
 }
-
+#endif

@@ -24,7 +24,7 @@ public class LinkedTrackObject: Mappable {
     public private(set) var type: String!
     public private(set) var uri: String!
     public private(set) var href: String!
-    public private(set) var externalUrls: [String : String]!
+    public private(set) var externalUrls: [String: String]!
     
     public required init?(map: Map) {
         mapping(map: map)

@@ -20,12 +20,12 @@ import ObjectMapper
 
 public class Playlist: SimplifiedPlaylist {
     
-    public private(set) var description: String?
+    public private(set) var spotifyDescription: String?
     public private(set) var followers: FollowersObject!
 
     override public func mapping(map: Map) {
         super.mapping(map: map)
-        description <- map["description"]
+        spotifyDescription <- map["description"]
         followers <- map["followers"]
     }
 }

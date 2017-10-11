@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Spartan'
-  s.version          = '1.0.2'
+  s.version          = '1.1.0'
   s.summary          = 'An Elegant Spotify Web API Library Written in Swift for iOS and macOS'
 
 # This description is used to generate tags and improve search results.
@@ -34,5 +34,5 @@ Pod::Spec.new do |s|
   #   'Spartan' => ['Spartan/Assets/*.png']
   # }
 
-  s.dependency 'AlamofireObjectMapper', '~> 4.0.1'
+  s.dependency 'AlamoRecord', '~> 1.1.1'
 end

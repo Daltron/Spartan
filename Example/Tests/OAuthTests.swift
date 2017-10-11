@@ -11,32 +11,32 @@ import Spartan
 
 class OAuthTests: BaseTests {
     
-    private let CATEGORY_ID = "party"
-    private let ARTIST_TO_FOLLOW_ID = "74ASZWbe4lXaubB36ztrGX"
-    private let USER_TO_FOLLOW_ID = "onehintwonder"
-    private let SPARTAN_USER_ID = "spartangithub"
-    private let SPARTAN_PLAYLIST_ID = "53DijuDdXcYn54z0OUr8FY"
+    private let categoryId = "party"
+    private let artistToFollowId = "74ASZWbe4lXaubB36ztrGX"
+    private let userToFollowId = "onehintwonder"
+    private let spartanUserId = "spartangithub"
+    private let spartanPlaylistId = "53DijuDdXcYn54z0OUr8FY"
     
-    private let TRACK_IDS_TO_SAVE = ["3TwtrR1yNLY1PMPsrGQpOp", "0B5KeB25moPkcQUnbDvj3t", "5OVofGV3opkR1hq0C9RSCu"]
-    private let TRACK_IDS_TO_REMOVE = ["3TwtrR1yNLY1PMPsrGQpOp", "0B5KeB25moPkcQUnbDvj3t"]
-    private let TRACK_ID_TO_NEVER_REMOVE = "5OVofGV3opkR1hq0C9RSCu"
-    private let TRACK_URIS_TO_SAVE = ["spotify:track:3TwtrR1yNLY1PMPsrGQpOp", "spotify:track:0B5KeB25moPkcQUnbDvj3t", "spotify:track:5OVofGV3opkR1hq0C9RSCu"]
-    private let TRACK_URIS_TO_REMOVE = ["spotify:track:3TwtrR1yNLY1PMPsrGQpOp", "spotify:track:0B5KeB25moPkcQUnbDvj3t"]
+    private let trackIdsToSave = ["3TwtrR1yNLY1PMPsrGQpOp", "0B5KeB25moPkcQUnbDvj3t", "5OVofGV3opkR1hq0C9RSCu"]
+    private let trackIdsToRemove = ["3TwtrR1yNLY1PMPsrGQpOp", "0B5KeB25moPkcQUnbDvj3t"]
+    private let trackIdToNeverRemove = "5OVofGV3opkR1hq0C9RSCu"
+    private let trackUrisToSave = ["spotify:track:3TwtrR1yNLY1PMPsrGQpOp", "spotify:track:0B5KeB25moPkcQUnbDvj3t", "spotify:track:5OVofGV3opkR1hq0C9RSCu"]
+    private let trackUrisToRemove = ["spotify:track:3TwtrR1yNLY1PMPsrGQpOp", "spotify:track:0B5KeB25moPkcQUnbDvj3t"]
     
-    private let ALBUM_IDS_TO_SAVE = ["5MqEXYwwyJYjOb3g7vJ9ZY", "3o03nl4jDQYUDuX9d8lylY", "1wPbjuINyeQRPPGdLeE4ZH"]
-    private let ALBUM_IDS_TO_REMOVE = ["5MqEXYwwyJYjOb3g7vJ9ZY", "3o03nl4jDQYUDuX9d8lylY"]
-    private let ALBUM_ID_TO_NEVER_REMOVE = "1wPbjuINyeQRPPGdLeE4ZH"
+    private let albumIdsToSave = ["5MqEXYwwyJYjOb3g7vJ9ZY", "3o03nl4jDQYUDuX9d8lylY", "1wPbjuINyeQRPPGdLeE4ZH"]
+    private let albumIdsToRemove = ["5MqEXYwwyJYjOb3g7vJ9ZY", "3o03nl4jDQYUDuX9d8lylY"]
+    private let albumIdToNeverRemove = "1wPbjuINyeQRPPGdLeE4ZH"
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         Spartan.loggingEnabled = true
-        Spartan.authorizationToken = "BQBGAmkLrKUdegldOwWFmdX0J9v5mnjB3LqjU2jUOTlA8QkIqwkpBi1t1MSt8z7F8MGzxCP05oeBGp_L-sFrxTdIp2QKc3bklqkTv9NFBo0N_5h3CVzYeNReaG3gTc3l3MwDfKBsmNI857_3Th0OgO3GPTTghvxNIN6NkU_ljNo64dKtliOobn5c2bT__5jmcClYQ3GggM9Bpedss-j9eytFHdwmTeyCBUVhelYOtBf45-5mMLUnxZEbI93Il0UpRjuDP3IRl-dq4sN-FzHHWQwezFHawsC2rQ4-DU0NQFMZMigZhia6X3k613c"
+        Spartan.authorizationToken = "BQDx206q5Z8ZOTn7H4FX6oLOOooqhyd3kRE3O2tOHI5xyrA9DVxpABuTUXROB1z2ORAE_2Ck8knN0ENQ59Dh8G4BLnfEYMCO9jFAtHFCKmPic_czPjEqHkHyvlV2jE-UmVIrN0BN5eFCCN_iSAOgcO722PNBhUj6STCaXOpyescFSmTHxSuU4vlv_pVJYUXEaxULWRDoDTrngwrQQxUf0JFveY8OOGcnB51CdGwYldF6RZ4aUBGTUUIf99zn4EdkD27reCRCal30_Kvd4AOmNmyo-S4FPqgbxpR8iBFxLfSKDwKWX_mOQlTor80"
     }
     
     func testThatGetAudioAnalysisRequestCorrectlyMapsAudioAnalysisForGivenTrackIdWithAuthorizationToken() {
         
-        _ = Spartan.getAudioAnaylsis(trackId: TRACK_ID, success: { (audioAnalysis) in
+        _ = Spartan.getAudioAnaylsis(trackId: trackId, success: { (audioAnalysis) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -62,7 +62,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetAudioFeaturesRequestCorrectlyMapsAudioFeaturesObjectForGivenTrackWithIdWithAuthorizationToken() {
         
-        _ = Spartan.getAudioFeatures(trackId: TRACK_ID, success: { (audioFeaturesObject) in
+        _ = Spartan.getAudioFeatures(trackId: trackId, success: { (audioFeaturesObject) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
          }, failure: { (error) in
@@ -75,7 +75,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetAudioFeaturesRequestCorrectlyMapsAudioFeaturesObjectsForGivenTracksWithIdsWithAuthorizationToken() {
         
-        _ = Spartan.getAudioFeatures(trackIds: [TRACK_ID, TRACK_ID, TRACK_ID], success: { (audioFeaturesObjects) in
+        _ = Spartan.getAudioFeatures(trackIds: [trackId, trackId, trackId], success: { (audioFeaturesObjects) in
             self.validationExpectation.fulfill()
             XCTAssert(audioFeaturesObjects.count == 3)
         }, failure: { (error) in
@@ -127,7 +127,7 @@ class OAuthTests: BaseTests {
 
     func testThatGetCategoryRequestCorrectlyMapsCategoryObjectWithAuthorizationToken() {
         
-        _ = Spartan.getCategory(id: CATEGORY_ID, success: { (category) in
+        _ = Spartan.getCategory(id: categoryId, success: { (category) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -140,7 +140,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetCategorysPlaylistsRequestsCorrectlyMapsCategoryObjectsWithAuthorizationToken() {
         
-        _ = Spartan.getCategorysPlaylists(categoryId: CATEGORY_ID, success: { (pagingObject) in
+        _ = Spartan.getCategorysPlaylists(categoryId: categoryId, success: { (pagingObject) in
             self.validationExpectation.fulfill()
             XCTAssert(pagingObject.items.count > 0)
         }, failure: { (error) in
@@ -179,7 +179,7 @@ class OAuthTests: BaseTests {
     
     func testThatFollowRequestCorrectlyWorksForArtistTypeWithAuthorizationToken() {
         
-        _ = Spartan.follow(ids: [ARTIST_TO_FOLLOW_ID], type: .artist, success: { 
+        _ = Spartan.follow(ids: [artistToFollowId], type: .artist, success: { 
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -192,7 +192,7 @@ class OAuthTests: BaseTests {
     
     func testThatFollowRequestCorrectlyWorksForUserTypeWithAuthorizationToken() {
         
-        _ = Spartan.follow(ids: [USER_TO_FOLLOW_ID], type: .user, success: {
+        _ = Spartan.follow(ids: [userToFollowId], type: .user, success: {
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -205,7 +205,7 @@ class OAuthTests: BaseTests {
     
     func testThatUnfollowRequestCorrectlyWorksForArtistTypeWithAuthorizationToken() {
         
-        _ = Spartan.unfollow(ids: [ARTIST_TO_FOLLOW_ID], type: .artist, success: {
+        _ = Spartan.unfollow(ids: [artistToFollowId], type: .artist, success: {
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -218,7 +218,7 @@ class OAuthTests: BaseTests {
     
     func testThatUnfollowRequestCorrectlyWorksForUserTypeWithAuthorizationToken() {
         
-        _ = Spartan.unfollow(ids: [USER_TO_FOLLOW_ID], type: .user, success: {
+        _ = Spartan.unfollow(ids: [userToFollowId], type: .user, success: {
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -231,7 +231,7 @@ class OAuthTests: BaseTests {
 
     func testThatFollowContainsRequestCorrectlyWorksForArtistTypeWithAuthorizationToken() {
         
-        _ = Spartan.getIsFollowing(ids: [ARTIST_TO_FOLLOW_ID, ARTIST_TO_FOLLOW_ID, ARTIST_TO_FOLLOW_ID], type: .artist, success: { (followingBools) in
+        _ = Spartan.getIsFollowing(ids: [artistToFollowId, artistToFollowId, artistToFollowId], type: .artist, success: { (followingBools) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -244,7 +244,7 @@ class OAuthTests: BaseTests {
     
     func testThatFollowContainsRequestCorrectlyWorksForUserTypeWithAuthorizationToken() {
         
-        _ = Spartan.getIsFollowing(ids: [USER_TO_FOLLOW_ID, USER_TO_FOLLOW_ID, USER_TO_FOLLOW_ID], type: .user, success: { (followingBools) in
+        _ = Spartan.getIsFollowing(ids: [userToFollowId, userToFollowId, userToFollowId], type: .user, success: { (followingBools) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -257,7 +257,7 @@ class OAuthTests: BaseTests {
     
     func testThatFollowPlaylistRequestCorrectlyFollowsPlaylistForGivenIdWithAuthorizationToken() {
         
-        _ = Spartan.followPlaylist(ownerId: SPARTAN_USER_ID, playlistId: SPARTAN_PLAYLIST_ID, success: {
+        _ = Spartan.followPlaylist(ownerId: spartanUserId, playlistId: spartanPlaylistId, success: {
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -271,9 +271,9 @@ class OAuthTests: BaseTests {
     func testThatUnfollowPlaylistRequestCorrectlyUnfollowsPlaylistForGivenIdWithAuthorizationToken() {
         
         let playlistName = UUID.init().uuidString
-        _ = Spartan.createPlaylist(userId: SPARTAN_USER_ID, name: playlistName, success: { (playlist) in
+        _ = Spartan.createPlaylist(userId: spartanUserId, name: playlistName, success: { (playlist) in
             
-            _ = Spartan.unfollowPlaylist(ownerId: self.SPARTAN_USER_ID, playlistId: playlist.id!, success: {
+            _ = Spartan.unfollowPlaylist(ownerId: self.spartanUserId, playlistId: playlist.id! as! String, success: {
                 self.validationExpectation.fulfill()
                 XCTAssert(true)
             }, failure: { (error) in
@@ -291,7 +291,7 @@ class OAuthTests: BaseTests {
     
     func testThatSaveTracksRequestCorrectlySavesTracksForUserWithAuthorizationToken() {
         
-        _ = Spartan.saveTracks(trackIds: TRACK_IDS_TO_SAVE, success: {
+        _ = Spartan.saveTracks(trackIds: trackIdsToSave, success: {
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -317,7 +317,7 @@ class OAuthTests: BaseTests {
     
     func testThatRemoveSavedTracksRequestCorrectlyRemovesTracksForUserWithAuthorizationToken() {
         
-        _ = Spartan.removeSavedTracks(trackIds: TRACK_IDS_TO_REMOVE, success: {
+        _ = Spartan.removeSavedTracks(trackIds: trackIdsToRemove, success: {
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -330,7 +330,7 @@ class OAuthTests: BaseTests {
     
     func testThatSavedTracksContainCorrectlyReturnsBoolArrayForUserWithAuthorizationToken() {
         
-        _ = Spartan.tracksAreSaved(trackIds: [TRACK_ID_TO_NEVER_REMOVE, TRACK_ID], success: { (savedBools) in
+        _ = Spartan.tracksAreSaved(trackIds: [trackIdToNeverRemove, trackId], success: { (savedBools) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -343,7 +343,7 @@ class OAuthTests: BaseTests {
     
     func testThatSaveAlbumsRequestCorrectlySavesAlbumsForUserWithAuthorizationToken() {
         
-        _ = Spartan.saveAlbums(albumIds: ALBUM_IDS_TO_SAVE, success: {
+        _ = Spartan.saveAlbums(albumIds: albumIdsToSave, success: {
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -369,7 +369,7 @@ class OAuthTests: BaseTests {
     
     func testThatRemoveSavedAlbumsRequestCorrectlyRemovesAlbumsForUserWithAuthorizationToken() {
         
-        _ = Spartan.removeSavedAlbums(albumIds: ALBUM_IDS_TO_REMOVE, success: {
+        _ = Spartan.removeSavedAlbums(albumIds: albumIdsToRemove, success: {
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -382,7 +382,7 @@ class OAuthTests: BaseTests {
     
     func testThatSavedAlbumsContainCorrectlyReturnsBoolArrayForUserWithAuthorizationToken() {
         
-        _ = Spartan.albumsAreSaved(albumIds: [ALBUM_ID_TO_NEVER_REMOVE, ALBUM_ID], success: { (savedBools) in
+        _ = Spartan.albumsAreSaved(albumIds: [albumIdToNeverRemove, albumId], success: { (savedBools) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -439,7 +439,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetUsersPlaylistsRequestCorrectlyGetsUsersPlaylistsWithAuthorizationToken() {
         
-        _ = Spartan.getUsersPlaylists(userId: SPARTAN_USER_ID, success: { (pagingObject) in
+        _ = Spartan.getUsersPlaylists(userId: spartanUserId, success: { (pagingObject) in
             self.validationExpectation.fulfill()
             XCTAssert(pagingObject.items.count > 0)
         }, failure: { (error) in
@@ -465,7 +465,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetUsersPlaylistRequestCorrectlyGetsUserPlaylistWithIdWithAuthorizationToken() {
         
-        _ = Spartan.getUsersPlaylist(userId: SPARTAN_USER_ID, playlistId: SPARTAN_PLAYLIST_ID, success: { (playlist) in
+        _ = Spartan.getUsersPlaylist(userId: spartanUserId, playlistId: spartanPlaylistId, success: { (playlist) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -478,7 +478,7 @@ class OAuthTests: BaseTests {
 
     func testThatGetPlaylistTracksRequestCorrectlyGetsPlaylistTracksWithAuthorizationToken() {
         
-        _ = Spartan.getPlaylistTracks(userId: SPARTAN_USER_ID, playlistId: SPARTAN_PLAYLIST_ID, success: { (pagingObject) in
+        _ = Spartan.getPlaylistTracks(userId: spartanUserId, playlistId: spartanPlaylistId, success: { (pagingObject) in
             self.validationExpectation.fulfill()
             XCTAssert(pagingObject.items.count > 0)
         }, failure: { (error) in
@@ -492,9 +492,9 @@ class OAuthTests: BaseTests {
     func testThatCreatePlaylistRequestCorrectlyCreatesPlaylistWithAuthorizationToken() {
         
         let playlistName = UUID.init().uuidString
-        _ = Spartan.createPlaylist(userId: SPARTAN_USER_ID, name: playlistName, success: { (playlist) in
+        _ = Spartan.createPlaylist(userId: spartanUserId, name: playlistName, success: { (playlist) in
             
-            _ = Spartan.unfollowPlaylist(ownerId: self.SPARTAN_USER_ID, playlistId: playlist.id, success: nil, failure: nil)
+            _ = Spartan.unfollowPlaylist(ownerId: self.spartanUserId, playlistId: playlist.id as! String, success: nil, failure: nil)
             
             self.validationExpectation.fulfill()
             XCTAssert(playlist.name == playlistName)
@@ -510,9 +510,9 @@ class OAuthTests: BaseTests {
         
         let originalPlaylistName = UUID.init().uuidString
         let changedPlaylistName = UUID.init().uuidString
-        _ = Spartan.createPlaylist(userId: SPARTAN_USER_ID, name: originalPlaylistName, success: { (playlist) in
+        _ = Spartan.createPlaylist(userId: spartanUserId, name: originalPlaylistName, success: { (playlist) in
             
-            _ = Spartan.changePlaylistDetails(userId: self.SPARTAN_USER_ID, playlistId: playlist.id!, name: changedPlaylistName, isPublic: false, isCollaborative: false, success: { () in
+            _ = Spartan.changePlaylistDetails(userId: self.spartanUserId, playlistId: playlist.id! as! String, name: changedPlaylistName, isPublic: false, isCollaborative: false, success: { () in
                 
                 self.validationExpectation.fulfill()
                 XCTAssert(true)
@@ -532,7 +532,7 @@ class OAuthTests: BaseTests {
 
     func testThatAddTracksToPlaylistRequestCorrectlyAddsTracksToPlaylistWithAuthorizationToken() {
         
-        _ = Spartan.addTracksToPlaylist(userId: SPARTAN_USER_ID, playlistId: SPARTAN_PLAYLIST_ID, trackUris: TRACK_URIS_TO_SAVE, success: { (snapshotResponse) in
+        _ = Spartan.addTracksToPlaylist(userId: spartanUserId, playlistId: spartanPlaylistId, trackUris: trackUrisToSave, success: { (snapshotResponse) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -545,7 +545,7 @@ class OAuthTests: BaseTests {
     
     func testThatRemoveTracksFromPlaylistRequestCorrectlyRemovesTracksFromPlaylistWithAuthorizationToken() {
         
-        _ = Spartan.removeTracksFromPlaylist(userId: SPARTAN_USER_ID, playlistId: SPARTAN_PLAYLIST_ID, trackUris: TRACK_URIS_TO_REMOVE, success: { (snapshotResponse) in
+        _ = Spartan.removeTracksFromPlaylist(userId: spartanUserId, playlistId: spartanPlaylistId, trackUris: trackUrisToRemove, success: { (snapshotResponse) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -558,7 +558,7 @@ class OAuthTests: BaseTests {
     
     func testThatReorderPlaylistsTracksRequestCorrectlyReordersPlaylistTracksWithAuthorizationToken() {
         
-        _ = Spartan.reorderPlaylistsTracks(userId: SPARTAN_USER_ID, playlistId: SPARTAN_PLAYLIST_ID, rangeStart: 0, insertBefore: 1, success: { (snapshotResponse) in
+        _ = Spartan.reorderPlaylistsTracks(userId: spartanUserId, playlistId: spartanPlaylistId, rangeStart: 0, insertBefore: 1, success: { (snapshotResponse) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -571,7 +571,7 @@ class OAuthTests: BaseTests {
     
     func testThatReplacePlaylistsTracksRequestCorrectlyReplacesPlaylistTracksWithAuthorizationToken() {
         
-        _ = Spartan.replacePlaylistsTracks(userId: SPARTAN_USER_ID, playlistId: SPARTAN_PLAYLIST_ID, trackUris: [TRACK_URIS_TO_REMOVE.first!], success: {
+        _ = Spartan.replacePlaylistsTracks(userId: spartanUserId, playlistId: spartanPlaylistId, trackUris: [trackUrisToRemove.first!], success: {
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -584,7 +584,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetUsersAreFollowingPlaylistsRequestCorrectlyWorksWithAuthorizationToken() {
         
-        _ = Spartan.getUsersAreFollowingPlaylists(ownerId: SPARTAN_USER_ID, playlistId: SPARTAN_PLAYLIST_ID, userIds: [SPARTAN_USER_ID, "onehintwonder"], success: { (followings) in
+        _ = Spartan.getUsersAreFollowingPlaylists(ownerId: spartanUserId, playlistId: spartanPlaylistId, userIds: [spartanUserId, "onehintwonder"], success: { (followings) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -597,7 +597,7 @@ class OAuthTests: BaseTests {
 
     func testThatGetAlbumRequestCorrectlyMapsASingleAlbum() {
         
-        _ = Spartan.getAlbum(id: ALBUM_ID, success: { (album) in
+        _ = Spartan.getAlbum(id: albumId, success: { (album) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -609,7 +609,7 @@ class OAuthTests: BaseTests {
     }
     
     func testThatGetAlbumsRequestCorrectlyMapsMultipleAlbums() {
-        _ = Spartan.getAlbums(ids: [ALBUM_ID, ALBUM_ID, ALBUM_ID], success: { (albums) in
+        _ = Spartan.getAlbums(ids: [albumId, albumId, albumId], success: { (albums) in
             self.validationExpectation.fulfill()
             XCTAssert(albums.count == 3)
         }, failure: { (error) in
@@ -622,7 +622,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetTracksRequestCorrectlyMapsTracksForAlbumWithGivenId() {
         
-        _ = Spartan.getTracks(albumId: ALBUM_ID, success: { (pagingObject) in
+        _ = Spartan.getTracks(albumId: albumId, success: { (pagingObject) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -636,7 +636,7 @@ class OAuthTests: BaseTests {
     func testThatGetTracksRequestCorrectlyMapsFiveTracksForAlbumWithGivenIdWithLimit() {
         
         let limit = 5
-        _ = Spartan.getTracks(albumId: ALBUM_ID, limit: limit, success: { (pagingObject) in
+        _ = Spartan.getTracks(albumId: albumId, limit: limit, success: { (pagingObject) in
             self.validationExpectation.fulfill()
             XCTAssert(pagingObject.items.count == limit)
         }, failure: { (error) in
@@ -651,9 +651,9 @@ class OAuthTests: BaseTests {
         
         let limit = 5
         let trackOffsettedToId = "6ClztHzretmPHCeiNqR5wD"
-        _ = Spartan.getTracks(albumId: ALBUM_ID, limit: limit, offset: 2, success: { (pagingObject) in
+        _ = Spartan.getTracks(albumId: albumId, limit: limit, offset: 2, success: { (pagingObject) in
             self.validationExpectation.fulfill()
-            XCTAssert(pagingObject.items.first!.id == trackOffsettedToId)
+            XCTAssert((pagingObject.items.first!.id as! String) == trackOffsettedToId)
         }, failure: { (error) in
             self.validationExpectation.fulfill()
             XCTFail(error.errorMessage)
@@ -664,7 +664,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetArtistRequestCorrectlyMapsASingleArtist() {
         
-        _ = Spartan.getArtist(id: ARTIST_ID, success: { (artist) in
+        _ = Spartan.getArtist(id: artistId, success: { (artist) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -677,7 +677,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetArtistsRequestCorrectlyMapsMultipleArtists() {
         
-        _ = Spartan.getArtists(ids: [ARTIST_ID, ARTIST_ID, ARTIST_ID], success: { (artists) in
+        _ = Spartan.getArtists(ids: [artistId, artistId, artistId], success: { (artists) in
             self.validationExpectation.fulfill()
             XCTAssert(artists.count == 3)
         }, failure: { (error) in
@@ -690,7 +690,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetArtistAlbumsRequestCorrectlyMapsAllAlbums() {
         
-        _ = Spartan.getArtistAlbums(artistId: ARTIST_ID, success: { (albums) in
+        _ = Spartan.getArtistAlbums(artistId: artistId, success: { (albums) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -703,7 +703,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetArtistAlbumsRequestCorrectlyMapsFiveAlbumsForArtistWithGivenIdWithLimit() {
         let limit = 5
-        _ = Spartan.getArtistAlbums(artistId: ARTIST_ID, limit: limit, success: { (pagingObject) in
+        _ = Spartan.getArtistAlbums(artistId: artistId, limit: limit, success: { (pagingObject) in
             self.validationExpectation.fulfill()
             XCTAssert(pagingObject.items.count == 5)
         }, failure: { (error) in
@@ -716,10 +716,10 @@ class OAuthTests: BaseTests {
     
     func testThatGetArtistAlbumsRequestCorrectlyMapsFiveAlbumsForArtistWithGivenIdWithLimitAndOffset() {
         let limit = 5
-        let albumOffsettedToId = "2gYoPtUkgobS85ShWg16lR"
-        _ = Spartan.getArtistAlbums(artistId: ARTIST_ID, limit: limit, offset: 2, success: { (pagingObject) in
+        let albumOffsettedToId = "5XGwgWYQQK8tHwoNuLMCP9"
+        _ = Spartan.getArtistAlbums(artistId: artistId, limit: limit, offset: 2, success: { (pagingObject) in
             self.validationExpectation.fulfill()
-            XCTAssert(pagingObject.items.first!.id! == albumOffsettedToId)
+            XCTAssert((pagingObject.items.first!.id! as! String) == albumOffsettedToId)
         }, failure: { (error) in
             self.validationExpectation.fulfill()
             XCTFail(error.errorMessage)
@@ -730,7 +730,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetArtistTopTracksCorrectlyMapsTracksForArtistWithGivenId() {
         
-        _ = Spartan.getArtistsTopTracks(artistId: ARTIST_ID, country: .us, success: { (tracks) in
+        _ = Spartan.getArtistsTopTracks(artistId: artistId, country: .us, success: { (tracks) in
             self.validationExpectation.fulfill()
             XCTAssert(tracks.count >= 1)
         }, failure: { (error) in
@@ -743,7 +743,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetArtistRelatedArtistsCorrectlyMapsArtistsForArtistWithGivenId() {
         
-        _ = Spartan.getArtistsRelatedArtists(artistId: ARTIST_ID, success: { (artists) in
+        _ = Spartan.getArtistsRelatedArtists(artistId: artistId, success: { (artists) in
             self.validationExpectation.fulfill()
             XCTAssert(artists.count >= 1)
         }, failure: { (error) in
@@ -756,7 +756,7 @@ class OAuthTests: BaseTests {
     
     func testThatSearchCorrectlyMapsForAlbumItemSearchType() {
         
-        _ = Spartan.search(query: SEARCH_TERM, type: .album, success: { (pagingObject: PagingObject<SimplifiedAlbum>) in
+        _ = Spartan.search(query: searchTerm, type: .album, success: { (pagingObject: PagingObject<SimplifiedAlbum>) in
             self.validationExpectation.fulfill()
             XCTAssert(pagingObject.items.first!.type == Album.root)
         }, failure: { (error) in
@@ -769,7 +769,7 @@ class OAuthTests: BaseTests {
     
     func testThatSearchCorrectlyMapsForArtistItemSearchType() {
         
-        _ = Spartan.search(query: SEARCH_TERM, type: .artist, success: { (pagingObject: PagingObject<Artist>) in
+        _ = Spartan.search(query: searchTerm, type: .artist, success: { (pagingObject: PagingObject<Artist>) in
             self.validationExpectation.fulfill()
             XCTAssert(pagingObject.items.first!.type == Artist.root)
         }, failure: { (error) in
@@ -782,7 +782,7 @@ class OAuthTests: BaseTests {
     
     func testThatSearchCorrectlyMapsForPlaylistItemSearchType() {
         
-        _ = Spartan.search(query: SEARCH_TERM, type: .playlist, success: { (pagingObject: PagingObject<SimplifiedPlaylist>) in
+        _ = Spartan.search(query: searchTerm, type: .playlist, success: { (pagingObject: PagingObject<SimplifiedPlaylist>) in
             self.validationExpectation.fulfill()
             XCTAssert(pagingObject.items.first!.type == SimplifiedPlaylist.root)
         }, failure: { (error) in
@@ -796,7 +796,7 @@ class OAuthTests: BaseTests {
     
     func testThatSearchCorrectlyMapsForTrackItemSearchType() {
         
-        _ = Spartan.search(query: SEARCH_TERM, type: .track, success: { (pagingObject: PagingObject<SimplifiedTrack>) in
+        _ = Spartan.search(query: searchTerm, type: .track, success: { (pagingObject: PagingObject<SimplifiedTrack>) in
             self.validationExpectation.fulfill()
             XCTAssert(pagingObject.items.first!.type == SimplifiedTrack.root)
         }, failure: { (error) in
@@ -809,7 +809,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetTrackRequestCorrectlyMapsASingleTrack() {
         
-        _ = Spartan.getTrack(id: TRACK_ID, success: { (track) in
+        _ = Spartan.getTrack(id: trackId, success: { (track) in
             self.validationExpectation.fulfill()
             XCTAssert(true)
         }, failure: { (error) in
@@ -822,7 +822,7 @@ class OAuthTests: BaseTests {
     
     func testThatGetTracksRequestCorrectlyMapsMultipleTracks() {
         
-        _ = Spartan.getTracks(ids: [TRACK_ID, TRACK_ID, TRACK_ID], success: { (tracks) in
+        _ = Spartan.getTracks(ids: [trackId, trackId, trackId], success: { (tracks) in
             self.validationExpectation.fulfill()
             XCTAssert(tracks.count == 3)
         }, failure: { (error) in

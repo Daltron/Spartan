@@ -53,31 +53,30 @@ public class PagingObject<T: Paginatable> : Mappable  {
         cursors <- map["cursors"]
     }
     
+    @discardableResult
     public func getNext(success: @escaping ((PagingObject<T>) -> Void), failure: ((SpartanError) -> Void)?) -> Request? {
         
-        if let next = next {
-            return SpartanRequestManager.mapObject(.get, urlString: next, success: success, failure: failure)
-        } else {
-            if let failure = failure {
-                let error = SpartanError(errorType: .other, errorMessage: "PagingObject does not have a next URL")
-                failure(error)
-            }
+        guard let next = next else {
+            let error = SpartanError(errorType: .other,
+                                     errorMessage: "PagingObject does not have a next URL")
+            failure?(error)
+            return nil
         }
-        
-        return nil
+        let url = SpartanURL(url: next, isRelative: false)
+        return SpartanRequestManager.default.mapObject(.get, url: url, success: success, failure: failure)
     }
     
+    @discardableResult
     public func getPrevious(success: @escaping ((PagingObject<T>) -> Void), failure: ((SpartanError) -> Void)?) -> Request? {
         
-        if let previous = previous {
-            return SpartanRequestManager.mapObject(.get, urlString: previous, success: success, failure: failure)
-        } else {
-            if let failure = failure {
-                let error = SpartanError(errorType: .other, errorMessage: "PagingObject does not have a previous URL")
-                failure(error)
-            }
+        guard let previous = previous else {
+            let error = SpartanError(errorType: .other,
+                                     errorMessage: "PagingObject does not have a previous URL")
+            failure?(error)
+            return nil
         }
         
-        return nil
+        let url = SpartanURL(url: previous, isRelative: false)
+        return SpartanRequestManager.default.mapObject(.get, url: url, success: success, failure: failure)
     }
 }

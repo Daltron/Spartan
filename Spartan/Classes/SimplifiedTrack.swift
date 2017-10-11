@@ -20,7 +20,7 @@ import ObjectMapper
 
 public class SimplifiedTrack: SpartanBaseObject {
     
-    override class var root: String {
+    override public class var root: String {
         return "track"
     }
     
@@ -29,7 +29,7 @@ public class SimplifiedTrack: SpartanBaseObject {
     public private(set) var discNumber: Int!
     public private(set) var durationMs: Int!
     public private(set) var explicit: Bool!
-    public private(set) var externalUrls: [String : String]!
+    public private(set) var externalUrls: [String: String]!
     public private(set) var isPlayable: Bool?
     public private(set) var linkedFrom: LinkedTrackObject?
     public private(set) var name: String!

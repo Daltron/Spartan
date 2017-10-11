@@ -16,19 +16,26 @@
  
  */
 
-import Foundation
+import AlamoRecord
 
-class SpartanURL: NSObject {
+public class SpartanURL: AlamoRecord.URLProtocol {
 
-    private var urlString:String!
-    
-    var stringValue : String {
-        return "https://api.spotify.com/v1/\(urlString!)"
+    private var url: String
+    private var isRelative: Bool = true
+    public var absolute: String {
+        if isRelative {
+             return "https://api.spotify.com/v1/\(url)"
+        } else {
+            return url
+        }
     }
     
-    init(_ urlString: String) {
-        self.urlString = urlString
+    required public init(url: String) {
+        self.url = url
     }
     
-
+    public convenience init(url: String, isRelative: Bool) {
+        self.init(url: url)
+        self.isRelative = isRelative
+    }
 }

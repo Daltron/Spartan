@@ -20,7 +20,7 @@ import ObjectMapper
 
 public class SimplifiedArtist: SpartanBaseObject {
 
-    override class var root: String {
+    override public class var root: String {
         return "artist"
     }
     

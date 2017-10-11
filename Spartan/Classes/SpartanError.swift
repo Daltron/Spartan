@@ -16,6 +16,7 @@
  
  */
 
+import AlamoRecord
 import ObjectMapper
 
 public enum SpartanErrorType {
@@ -23,36 +24,34 @@ public enum SpartanErrorType {
     case other
 }
 
-public class SpartanError: NSObject, Mappable {
-    
-    private let ERROR_PREFIX = "SpartanError:"
+public class SpartanError: AlamoRecordError {
     
     override open var description: String {
-        return "\(ERROR_PREFIX) \(errorMessage!)"
+        return "SpartanError: \(errorMessage!)"
     }
     
     private var statusCode: Int!
     public private(set) var errorType: SpartanErrorType!
     public private(set) var errorMessage: String!
     
-    init(error: Error) {
-        super.init()
-        errorMessage = error.localizedDescription
-        determineErrorType(statusCode: (error as NSError).code)
+    required public init(nsError: NSError) {
+        super.init(nsError: nsError)
+        errorMessage = nsError.localizedDescription
+        determineErrorType(statusCode: nsError.code)
     }
     
     init(errorType: SpartanErrorType, errorMessage: String) {
-        super.init()
+        super.init(nsError: NSError(domain: "", code: 0, userInfo: nil))
         self.errorType = errorType
         self.errorMessage = errorMessage
     }
-    
+
     required public init?(map: Map) {
-        super.init()
-        mapping(map: map)
+        super.init(map: map)
     }
     
-    public func mapping(map: Map) {
+    override public func mapping(map: Map) {
+        super.mapping(map: map)
         statusCode <- map["error.status"]
         errorMessage <- map["error.message"]
         determineErrorType(statusCode: statusCode)
@@ -63,27 +62,6 @@ public class SpartanError: NSObject, Mappable {
             errorType = .unauthorized
         } else {
             errorType = .other
-        }
-    }
-    
-    class func parseSpotifyError(data: Data?, error: Error, statusCode: Int? = nil) -> SpartanError {
-        
-        let spartanError: SpartanError!
-        do {
-            if let data = data {
-                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-                if json is [String : Any] {
-                    spartanError = Mapper<SpartanError>().map(JSON: json as! [String : Any])
-                } else {
-                    spartanError = SpartanError(error: error)
-                }
-                
-            } else {
-                spartanError = SpartanError(error: error)
-            }
-            return spartanError
-        } catch {
-            return SpartanError(error: error)
         }
     }
 }

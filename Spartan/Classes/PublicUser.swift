@@ -20,12 +20,12 @@ import ObjectMapper
 
 public class PublicUser: SpartanBaseObject {
     
-    override class var root: String {
+    override public class var root: String {
         return "user"
     }
     
     public private(set) var displayName: String?
-    public private(set) var externalUrls: [String : String]!
+    public private(set) var externalUrls: [String: String]!
     public private(set) var followers: FollowersObject?
     public private(set) var images: [SpartanImage]?
     

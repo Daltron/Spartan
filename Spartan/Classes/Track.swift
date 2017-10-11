@@ -20,9 +20,13 @@ import Alamofire
 import ObjectMapper
 
 public class Track: SimplifiedTrack {
+    
+    override public class var keyPath: String? {
+        return Album.root
+    }
 
     public private(set) var album: SimplifiedAlbum!
-    public private(set) var externalIds: [String : String]!
+    public private(set) var externalIds: [String: String]!
     public private(set) var popularity: Int!
     
     public override func mapping(map: Map) {
@@ -30,9 +34,5 @@ public class Track: SimplifiedTrack {
         album <- map["album"]
         externalIds <- map["external_ids"]
         popularity <- map["popularity"]
-    }
-    
-    override class func find<T: Mappable>(_ id: String, parameters: [String: Any]? = nil, success: ((T) -> Void)?, failure: ((SpartanError) -> Void)?) -> Request {
-        return SpartanRequestManager.mapObject(.get, urlString: urlForFind(id).stringValue, keyPath: Album.root, success: success, failure: failure)
     }
 }

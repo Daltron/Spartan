@@ -27,14 +27,14 @@ public enum AlbumType : String {
 
 public class SimplifiedAlbum: SpartanBaseObject {
     
-    override class var root: String {
+    override public class var root: String {
         return "album"
     }
     
     public private(set) var albumType: String!
     public private(set) var artists: [SimplifiedArtist]!
     public private(set) var availableMarkets: [String]!
-    public private(set) var externalUrls: [String : String]!
+    public private(set) var externalUrls: [String: String]!
     public private(set) var images: [SpartanImage]!
     public private(set) var name: String!
 

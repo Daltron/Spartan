@@ -1,7 +1,7 @@
 /*
  
  The MIT License (MIT)
- Copyright (c) 2017 Dalton Hinterscher
+ Copyright (c) 2017 Tunespeak
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
  to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -18,34 +18,53 @@
 
 import Alamofire
 
-class SpartanRequestLogger: NSObject {
+class Logger: NSObject {
 
-    fileprivate static let LOGGER_PREFIX = "[SpartanRequestLogger]"
+    /// If true, each request will be logged to the console
+    static var loggingEnabled: Bool = true
     
-    class func logPendingRequest(request:DataRequest){
-        if Spartan.loggingEnabled {
-            let method = request.request!.httpMethod!
-            let urlString = request.request!.url!.absoluteString
-            print("🔵 \(LOGGER_PREFIX) \(method) \(sanitizedUrlString(urlString: urlString))")
+    /// The prefix of each request that is logged to the console
+    fileprivate static let loggerPrefix = "[AlamoRecordLogger]"
+    
+    /*
+        Logs a request that just started to the console
+        - parameter request: The request to log to the console
+    */
+    class func logRequest(request: DataRequest) {
+        guard let httpMethod = request.request?.httpMethod, let url = request.request?.url else {
+            print("[AlamoRecordLogger] The request appears to invalid. Please check your URL and try again.")
+            return
+        }
+        if loggingEnabled {
+            print("🔵 \(loggerPrefix) \(httpMethod) \(url.absoluteString)")
         }
     }
     
-    class func logFinishedRequest<AnyObject>(response:DataResponse<AnyObject>){
-        if let responseObject = response.response {
+    /*
+        Logs a finished request that just started to the console
+        - parameter response: The response to log to the console
+     */
+    class func logFinishedResponse<AnyObject>(response: DataResponse<AnyObject>) {
+        guard let responseObject = response.response else {
+            return
+        }
+        
+        if loggingEnabled {
             let method = response.request!.httpMethod!
             let urlString = response.request!.url!.absoluteString
             let statusCode = responseObject.statusCode
-            let statusCodeString = STATUS_CODE_STRINGS[statusCode]
-            let duration = response.timeline.totalDuration
-            print("\(emoji(for: statusCode)) \(LOGGER_PREFIX) \(method) \(sanitizedUrlString(urlString: urlString)) (\(statusCode) \(statusCodeString!)) \(duration) seconds")
+            let statusCodeString = statusCodeStrings[statusCode]
+            let duration = String(response.timeline.totalDuration)
+            let trimmedDuration = duration.substring(to: duration.index(duration.startIndex, offsetBy: 4))
+            print("\(emoji(for: statusCode)) \(loggerPrefix) \(method) \(urlString) (\(statusCode) \(statusCodeString!)) \(trimmedDuration) seconds")            
         }
     }
     
-    private class func sanitizedUrlString(urlString: String) -> String {
-        return urlString.components(separatedBy: "?").first!
-    }
-    
-    private class func emoji(for statusCode:Int) -> String {
+    /*
+        Helper function that returns an emoji based on the given status code
+        parameter statusCode: The status code of the finished request
+     */
+    fileprivate class func emoji(for statusCode: Int) -> String {
         if statusCode >= 200 && statusCode <= 299 {
             return "⚪️"
         } else {
@@ -53,7 +72,8 @@ class SpartanRequestLogger: NSObject {
         }
     }
     
-    private static let STATUS_CODE_STRINGS =
+    /// All status code definitions
+    fileprivate static let statusCodeStrings =
         [100: "Continue",
          101: "Switching Protocols",
          102: "Processing",
@@ -118,4 +138,5 @@ class SpartanRequestLogger: NSObject {
          510: "Not Extended",
          511: "Network Authentication Required",
          521: "Web Server Is Down"]
+
 }
