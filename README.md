@@ -2,11 +2,11 @@
 
 [![CI Status](http://img.shields.io/travis/Daltron/Spartan.svg?style=flat)](https://travis-ci.org/Daltron/Spartan)
 [![Version](https://img.shields.io/cocoapods/v/Spartan.svg?style=flat)](http://cocoapods.org/pods/Spartan)
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift-3.0-4BC51D.svg?style=flat" alt="Language: Swift" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift-4.0-4BC51D.svg?style=flat" alt="Language: Swift" /></a>
 [![License](https://img.shields.io/cocoapods/l/Spartan.svg?style=flat)](http://cocoapods.org/pods/Spartan)
 [![Platform](https://img.shields.io/cocoapods/p/Spartan.svg?style=flat)](http://cocoapods.org/pods/Spartan)
 
-## Written in Swift 3
+## Written in Swift 4
 Spartan is a lightweight, elegant, and easy to use Spotify Web API wrapper library for iOS and macOS written in Swift 3. Under the hood, Spartan makes request to the Spotify Web API. Those requests are then turned into clean, friendly, and easy to use objects.
 
 ### What this library allows you to do:
@@ -18,7 +18,7 @@ Spartan is a lightweight, elegant, and easy to use Spotify Web API wrapper libra
 ## Requirements
 
  - iOS 9.0+ / macOS 10.11+
- - xCode 8.1+
+ - xCode 9.0+
 
 ## Installation
 
