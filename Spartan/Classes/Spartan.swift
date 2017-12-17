@@ -415,6 +415,7 @@ public class Spartan: NSObject {
         checkOptionalParamAddition(paramName: "after", param: after, parameters: &parameters)
         return SpartanRequestManager.default.mapObject(.get,
                                                        url: url,
+                                                       parameters: parameters,
                                                        keyPath: Artist.pluralRoot,
                                                        success: success,
                                                        failure: failure)
