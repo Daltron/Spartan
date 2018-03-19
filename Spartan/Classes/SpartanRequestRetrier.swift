@@ -9,12 +9,12 @@
 import Alamofire
 import AlamoRecord
 
-class SpartanRequestRetrier: RequestRetrier {
+public class SpartanRequestRetrier: RequestRetrier {
     
     // [Request url: Number of times retried]
     private var retriedRequests: [String: Int] = [:]
     
-    internal func should(_ manager: SessionManager,
+    public func should(_ manager: SessionManager,
                          retry request: Request,
                          with error: Error,
                          completion: @escaping RequestRetryCompletion) {
