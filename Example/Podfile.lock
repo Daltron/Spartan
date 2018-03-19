@@ -6,7 +6,7 @@ PODS:
   - AlamoRecord (1.1.1):
     - AlamofireObjectMapper (~> 5.0)
   - ObjectMapper (3.0.0)
-  - Spartan (1.0.2):
+  - Spartan (1.2.0):
     - AlamoRecord (~> 1.1.1)
 
 DEPENDENCIES:
@@ -21,7 +21,7 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   AlamoRecord: 78653b9a5da21ab5bb723167e0f552994df85d30
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
-  Spartan: 39b4963a6b75b1787b468f4d6d961b8574c99cb4
+  Spartan: 2adc8865fb313140767b82e5be13ee6064b7ab40
 
 PODFILE CHECKSUM: 8b03398acb613fe05be8ccc6e8b90c9ad5b05afd
 

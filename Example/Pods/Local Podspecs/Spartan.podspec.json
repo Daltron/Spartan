@@ -1,6 +1,6 @@
 {
   "name": "Spartan",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "summary": "An Elegant Spotify Web API Library Written in Swift for iOS and macOS",
   "description": "Spartan is a lightweight, elegant, and easy to use Spotify Web API wrapper library for iOS written in Swift 3. Under the hood, Spartan makes request to the Spotify Web API. Those requests are then turned into clean, friendly, and easy to use objects.",
   "homepage": "https://github.com/daltron/Spartan",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/daltron/Spartan.git",
-    "tag": "1.0.2"
+    "tag": "1.2.0"
   },
   "platforms": {
     "ios": "9.0",
