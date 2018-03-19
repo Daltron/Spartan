@@ -59,7 +59,7 @@
 		560FE660E022A6A604F1669E682E7523 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D89D21F8AF945893B737904002E0F0 /* Logger.swift */; };
 		57FC030AFC760FE8A40B72362E57A2D5 /* SpartanRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815813AA0F8D5B8B6E3D84878306C35A /* SpartanRequestAdapter.swift */; };
 		5BEC65F1E64F4BC3B0AD838E60E1C4A9 /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884ABB3AE727500BB248CC514D70C6A7 /* ToJSON.swift */; };
-		5C9C78BF205F44B6000D4623 /* SpartanRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C78BE205F44B5000D4623 /* SpartanRequestRetrier.swift */; };
+		5C9C78C8205F51FD000D4623 /* SpartanRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C78C7205F51FD000D4623 /* SpartanRequestRetrier.swift */; };
 		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6448E20AD2D75723A8B5FBBE8FDE24 /* DispatchQueue+Alamofire.swift */; };
 		6140699B499701C95C16CA9E10A60B10 /* EnumOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF467192ED23FF00F2628A00B339DD /* EnumOperators.swift */; };
 		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29170B76BDD655ADB59C8F2A19466612 /* ServerTrustPolicy.swift */; };
@@ -323,7 +323,7 @@
 		5690C7ADF9EBD12A13ED860200719D11 /* SimplifiedAlbum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplifiedAlbum.swift; path = Spartan/Classes/SimplifiedAlbum.swift; sourceTree = "<group>"; };
 		574838315928948BC888FD6287ED1D45 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		5A72C200018385554DAFE940D0687E16 /* Spartan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Spartan.modulemap; sourceTree = "<group>"; };
-		5C9C78BE205F44B5000D4623 /* SpartanRequestRetrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestRetrier.swift; path = Example/Spartan/SpartanRequestRetrier.swift; sourceTree = "<group>"; };
+		5C9C78C7205F51FD000D4623 /* SpartanRequestRetrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestRetrier.swift; path = Spartan/Classes/SpartanRequestRetrier.swift; sourceTree = "<group>"; };
 		6051DFB0A25ED154624C9E2B75E55037 /* SimplifiedArtist.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplifiedArtist.swift; path = Spartan/Classes/SimplifiedArtist.swift; sourceTree = "<group>"; };
 		6100DC100C6920601643288767DF107B /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
 		612B332ECE24FBF6474FEACEBE163C70 /* DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTransform.swift; path = Sources/DateTransform.swift; sourceTree = "<group>"; };
@@ -570,7 +570,6 @@
 		3AAD0F4591A6C998DA93A89ED307E7FA /* Spartan */ = {
 			isa = PBXGroup;
 			children = (
-				5C9C78BE205F44B5000D4623 /* SpartanRequestRetrier.swift */,
 				F90D309899ECE2CEE4C4CC7CAE26A4FD /* Album.swift */,
 				0D7C5C02BB62C8B9B295A9AB0F0A5EE2 /* Artist.swift */,
 				0F41B0264152ADD0856EA6FD6B429108 /* AudioAnalysis.swift */,
@@ -612,12 +611,13 @@
 				AECC8E742AB77EFB5A29828394151BE4 /* SpartanImage.swift */,
 				815813AA0F8D5B8B6E3D84878306C35A /* SpartanRequestAdapter.swift */,
 				B2D2635BCF93B5370156A7F4D27CE235 /* SpartanRequestManager.swift */,
+				5C9C78C7205F51FD000D4623 /* SpartanRequestRetrier.swift */,
 				EB7B4FB8251778FBE7AA4E9EE5701DE7 /* SpartanURL.swift */,
+				ECE523D90101B5B9A4620963C3CD01B5 /* Support Files */,
 				CC2FE4503ACFEC16144E36DA51B31894 /* TimeRange.swift */,
 				0B4A2FECC931208312568CAF6741551A /* Track.swift */,
 				5382DF5676F17EB1B443895FCED8C2F1 /* TracksObject.swift */,
 				B4EAB76EBA4D9B233C3D8D28ABD5932C /* TuneableTrackAttribute.swift */,
-				ECE523D90101B5B9A4620963C3CD01B5 /* Support Files */,
 			);
 			name = Spartan;
 			path = ../..;
@@ -1195,7 +1195,7 @@
 				DA8C656CB174D9A72DB7E7BC6C5AC9FA /* ItemSearchType.swift in Sources */,
 				2CC7B2D0C772C898C1C98A5535C8F24C /* LinkedTrackObject.swift in Sources */,
 				A1E777ACC239EB3DF37621DBE40A1ACF /* Paginatable.swift in Sources */,
-				5C9C78BF205F44B6000D4623 /* SpartanRequestRetrier.swift in Sources */,
+				5C9C78C8205F51FD000D4623 /* SpartanRequestRetrier.swift in Sources */,
 				DDD394BD1D3C3A9BFF4B5B809610F15C /* PagingObject.swift in Sources */,
 				3C16145F504CA89DC3AD75B057E25DAC /* Playlist.swift in Sources */,
 				29A7815663FA957A50E9A1693E0B5F28 /* PlaylistTrack.swift in Sources */,
