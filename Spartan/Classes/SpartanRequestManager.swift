@@ -24,12 +24,18 @@ public class SpartanRequestManager: RequestManager<SpartanURL, SpartanError> {
 
     static var `default`: SpartanRequestManager = SpartanRequestManager()
     
+    private var requestRetrier: SpartanRequestRetrier {
+        return configuration.requestRetrier as! SpartanRequestRetrier
+    }
+    
     init() {
         let configuration = Configuration { (config) in
             config.ignoredErrorCodes = [-997, -999]
             config.requestAdapter = SpartanRequestAdapter()
+            config.requestRetrier = SpartanRequestRetrier()
         }
         super.init(configuration: configuration)
+        configuration.requestObserver = requestRetrier
     }
 
     func mapBoolArray(_ method: Alamofire.HTTPMethod,

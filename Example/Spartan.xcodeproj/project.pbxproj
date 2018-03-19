@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55C7EA9C29FF4879F819610E /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B3E230F88599467808CB46 /* Pods_Tests.framework */; };
+		5C9C78BD205F3694000D4623 /* SpartanRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C78BC205F3694000D4623 /* SpartanRequestRetrier.swift */; };
 		5CF033941E3ED69F000C97CC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033671E3ED69F000C97CC /* Album.swift */; };
 		5CF033951E3ED69F000C97CC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033681E3ED69F000C97CC /* Artist.swift */; };
 		5CF033961E3ED69F000C97CC /* AudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033691E3ED69F000C97CC /* AudioAnalysis.swift */; };
@@ -126,6 +127,7 @@
 		579B6923694B30A7521FAACD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5C627F2D1E2F14D50042D9BE /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C627F311E2F14D50042D9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C9C78BC205F3694000D4623 /* SpartanRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartanRequestRetrier.swift; sourceTree = "<group>"; };
 		5CF033671E3ED69F000C97CC /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../../Spartan/Classes/Album.swift; sourceTree = "<group>"; };
 		5CF033681E3ED69F000C97CC /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = ../../Spartan/Classes/Artist.swift; sourceTree = "<group>"; };
 		5CF033691E3ED69F000C97CC /* AudioAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysis.swift; path = ../../Spartan/Classes/AudioAnalysis.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				5CF0338C1E3ED69F000C97CC /* SpartanImage.swift */,
 				5CF0338D1E3ED69F000C97CC /* SpartanRequestAdapter.swift */,
 				5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */,
+				5C9C78BC205F3694000D4623 /* SpartanRequestRetrier.swift */,
 				5CF033901E3ED69F000C97CC /* SpartanURL.swift */,
 				5CF033F61E415AA5000C97CC /* TimeRange.swift */,
 				5CF033911E3ED69F000C97CC /* Track.swift */,
@@ -650,6 +653,7 @@
 				5CF033F11E3ED77C000C97CC /* CursorsObject.swift in Sources */,
 				5CF033F71E415AA5000C97CC /* TimeRange.swift in Sources */,
 				5CF033A81E3ED69F000C97CC /* PlaylistTrack.swift in Sources */,
+				5C9C78BD205F3694000D4623 /* SpartanRequestRetrier.swift in Sources */,
 				5CF033B41E3ED69F000C97CC /* Spartan.swift in Sources */,
 				5CF0339E1E3ED69F000C97CC /* AudioFeaturesObject.swift in Sources */,
 				5CF033BC1E3ED69F000C97CC /* SpartanRequestManager.swift in Sources */,
