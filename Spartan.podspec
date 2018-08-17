@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Spartan'
-  s.version          = '1.2.0'
+  s.version          = '1.2.1'
   s.summary          = 'An Elegant Spotify Web API Library Written in Swift for iOS and macOS'
 
   s.description      = 'Spartan is a lightweight, elegant, and easy to use Spotify Web API wrapper library for iOS written in Swift 3. Under the hood, Spartan makes request to the Spotify Web API. Those requests are then turned into clean, friendly, and easy to use objects.'

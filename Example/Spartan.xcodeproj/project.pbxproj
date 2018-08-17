@@ -10,6 +10,8 @@
 		55C7EA9C29FF4879F819610E /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B3E230F88599467808CB46 /* Pods_Tests.framework */; };
 		5C9C78CA205F5210000D4623 /* SpartanRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C78C9205F5210000D4623 /* SpartanRequestRetrier.swift */; };
 		5C9C78CB205F5210000D4623 /* SpartanRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C78C9205F5210000D4623 /* SpartanRequestRetrier.swift */; };
+		5CA6D2F521271481009E9142 /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA6D2F421271481009E9142 /* SpartanError.swift */; };
+		5CA6D2F621271481009E9142 /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA6D2F421271481009E9142 /* SpartanError.swift */; };
 		5CF033941E3ED69F000C97CC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033671E3ED69F000C97CC /* Album.swift */; };
 		5CF033951E3ED69F000C97CC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033681E3ED69F000C97CC /* Artist.swift */; };
 		5CF033961E3ED69F000C97CC /* AudioAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033691E3ED69F000C97CC /* AudioAnalysis.swift */; };
@@ -44,7 +46,6 @@
 		5CF033B31E3ED69F000C97CC /* SnapshotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033861E3ED69F000C97CC /* SnapshotResponse.swift */; };
 		5CF033B41E3ED69F000C97CC /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033871E3ED69F000C97CC /* Spartan.swift */; };
 		5CF033B51E3ED69F000C97CC /* SpartanBaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033881E3ED69F000C97CC /* SpartanBaseObject.swift */; };
-		5CF033B81E3ED69F000C97CC /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338B1E3ED69F000C97CC /* SpartanError.swift */; };
 		5CF033B91E3ED69F000C97CC /* SpartanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338C1E3ED69F000C97CC /* SpartanImage.swift */; };
 		5CF033BA1E3ED69F000C97CC /* SpartanRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338D1E3ED69F000C97CC /* SpartanRequestAdapter.swift */; };
 		5CF033BC1E3ED69F000C97CC /* SpartanRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */; };
@@ -86,7 +87,6 @@
 		5CF033E01E3ED6AB000C97CC /* SnapshotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033861E3ED69F000C97CC /* SnapshotResponse.swift */; };
 		5CF033E11E3ED6AB000C97CC /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033871E3ED69F000C97CC /* Spartan.swift */; };
 		5CF033E21E3ED6AB000C97CC /* SpartanBaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF033881E3ED69F000C97CC /* SpartanBaseObject.swift */; };
-		5CF033E51E3ED6AB000C97CC /* SpartanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338B1E3ED69F000C97CC /* SpartanError.swift */; };
 		5CF033E61E3ED6AB000C97CC /* SpartanImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338C1E3ED69F000C97CC /* SpartanImage.swift */; };
 		5CF033E71E3ED6AB000C97CC /* SpartanRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338D1E3ED69F000C97CC /* SpartanRequestAdapter.swift */; };
 		5CF033E91E3ED6AB000C97CC /* SpartanRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */; };
@@ -129,6 +129,7 @@
 		5C627F2D1E2F14D50042D9BE /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C627F311E2F14D50042D9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C9C78C9205F5210000D4623 /* SpartanRequestRetrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestRetrier.swift; path = ../../Spartan/Classes/SpartanRequestRetrier.swift; sourceTree = "<group>"; };
+		5CA6D2F421271481009E9142 /* SpartanError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanError.swift; path = ../../Spartan/Classes/SpartanError.swift; sourceTree = "<group>"; };
 		5CF033671E3ED69F000C97CC /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../../Spartan/Classes/Album.swift; sourceTree = "<group>"; };
 		5CF033681E3ED69F000C97CC /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = ../../Spartan/Classes/Artist.swift; sourceTree = "<group>"; };
 		5CF033691E3ED69F000C97CC /* AudioAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioAnalysis.swift; path = ../../Spartan/Classes/AudioAnalysis.swift; sourceTree = "<group>"; };
@@ -163,7 +164,6 @@
 		5CF033861E3ED69F000C97CC /* SnapshotResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotResponse.swift; path = ../../Spartan/Classes/SnapshotResponse.swift; sourceTree = "<group>"; };
 		5CF033871E3ED69F000C97CC /* Spartan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spartan.swift; path = ../../Spartan/Classes/Spartan.swift; sourceTree = "<group>"; };
 		5CF033881E3ED69F000C97CC /* SpartanBaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanBaseObject.swift; path = ../../Spartan/Classes/SpartanBaseObject.swift; sourceTree = "<group>"; };
-		5CF0338B1E3ED69F000C97CC /* SpartanError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanError.swift; path = ../../Spartan/Classes/SpartanError.swift; sourceTree = "<group>"; };
 		5CF0338C1E3ED69F000C97CC /* SpartanImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanImage.swift; path = ../../Spartan/Classes/SpartanImage.swift; sourceTree = "<group>"; };
 		5CF0338D1E3ED69F000C97CC /* SpartanRequestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestAdapter.swift; path = ../../Spartan/Classes/SpartanRequestAdapter.swift; sourceTree = "<group>"; };
 		5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpartanRequestManager.swift; path = ../../Spartan/Classes/SpartanRequestManager.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 				5CF033861E3ED69F000C97CC /* SnapshotResponse.swift */,
 				5CF033871E3ED69F000C97CC /* Spartan.swift */,
 				5CF033881E3ED69F000C97CC /* SpartanBaseObject.swift */,
-				5CF0338B1E3ED69F000C97CC /* SpartanError.swift */,
+				5CA6D2F421271481009E9142 /* SpartanError.swift */,
 				5CF0338C1E3ED69F000C97CC /* SpartanImage.swift */,
 				5CF0338D1E3ED69F000C97CC /* SpartanRequestAdapter.swift */,
 				5CF0338F1E3ED69F000C97CC /* SpartanRequestManager.swift */,
@@ -579,6 +579,7 @@
 				5CF033CD1E3ED6AB000C97CC /* CountryCode.swift in Sources */,
 				5CF033CE1E3ED6AB000C97CC /* FeaturedPlaylistsObject.swift in Sources */,
 				5CF033CF1E3ED6AB000C97CC /* FollowersObject.swift in Sources */,
+				5CA6D2F621271481009E9142 /* SpartanError.swift in Sources */,
 				5CF033D01E3ED6AB000C97CC /* FollowType.swift in Sources */,
 				5CF033D11E3ED6AB000C97CC /* ItemSearchType.swift in Sources */,
 				5CF033D21E3ED6AB000C97CC /* LinkedTrackObject.swift in Sources */,
@@ -598,7 +599,6 @@
 				5CF033E01E3ED6AB000C97CC /* SnapshotResponse.swift in Sources */,
 				5CF033E11E3ED6AB000C97CC /* Spartan.swift in Sources */,
 				5CF033E21E3ED6AB000C97CC /* SpartanBaseObject.swift in Sources */,
-				5CF033E51E3ED6AB000C97CC /* SpartanError.swift in Sources */,
 				5CF033E61E3ED6AB000C97CC /* SpartanImage.swift in Sources */,
 				5CF033E71E3ED6AB000C97CC /* SpartanRequestAdapter.swift in Sources */,
 				5CF033E91E3ED6AB000C97CC /* SpartanRequestManager.swift in Sources */,
@@ -630,12 +630,12 @@
 				5CF033B21E3ED69F000C97CC /* SimplifiedTrack.swift in Sources */,
 				5CF0339B1E3ED69F000C97CC /* AudioAnalysisSegment.swift in Sources */,
 				5CF033AE1E3ED69F000C97CC /* SavedTrack.swift in Sources */,
-				5CF033B81E3ED69F000C97CC /* SpartanError.swift in Sources */,
 				5CF033A11E3ED69F000C97CC /* FeaturedPlaylistsObject.swift in Sources */,
 				5CF0339A1E3ED69F000C97CC /* AudioAnalysisSection.swift in Sources */,
 				5CF0339C1E3ED69F000C97CC /* AudioAnalysisTatum.swift in Sources */,
 				5CF033971E3ED69F000C97CC /* AudioAnalysisBar.swift in Sources */,
 				5CF033BF1E3ED69F000C97CC /* TracksObject.swift in Sources */,
+				5CA6D2F521271481009E9142 /* SpartanError.swift in Sources */,
 				5CF033B11E3ED69F000C97CC /* SimplifiedPlaylist.swift in Sources */,
 				5CF033A31E3ED69F000C97CC /* FollowType.swift in Sources */,
 				5CF0339D1E3ED69F000C97CC /* AudioAnalysisTrack.swift in Sources */,
