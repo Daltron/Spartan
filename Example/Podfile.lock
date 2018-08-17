@@ -1,28 +1,35 @@
 PODS:
-  - Alamofire (4.5.1)
-  - AlamofireObjectMapper (5.0.0):
+  - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.1.0):
     - Alamofire (~> 4.1)
-    - ObjectMapper (~> 3.0)
-  - AlamoRecord (1.1.1):
-    - AlamofireObjectMapper (~> 5.0)
-  - ObjectMapper (3.0.0)
+    - ObjectMapper (~> 3.3)
+  - AlamoRecord (1.2.2):
+    - AlamofireObjectMapper (~> 5.1)
+  - ObjectMapper (3.3.0)
   - Spartan (1.2.0):
-    - AlamoRecord (~> 1.1.1)
+    - AlamoRecord (~> 1.2.0)
 
 DEPENDENCIES:
   - Spartan (from `../`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - AlamoRecord
+    - ObjectMapper
+
 EXTERNAL SOURCES:
   Spartan:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
-  AlamoRecord: 78653b9a5da21ab5bb723167e0f552994df85d30
-  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
-  Spartan: 2adc8865fb313140767b82e5be13ee6064b7ab40
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
+  AlamoRecord: 5850c563a811fdca40cd361b1b27622004bccef3
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Spartan: 128c795cfc66c35b3f56b968ee8e60528071a56b
 
 PODFILE CHECKSUM: 8b03398acb613fe05be8ccc6e8b90c9ad5b05afd
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

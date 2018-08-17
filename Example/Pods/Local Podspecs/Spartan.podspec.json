@@ -22,7 +22,7 @@
   "source_files": "Spartan/Classes/**/*",
   "dependencies": {
     "AlamoRecord": [
-      "~> 1.1.1"
+      "~> 1.2.0"
     ]
   }
 }
