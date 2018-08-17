@@ -50,6 +50,14 @@ public class SpartanError: AlamoRecordError {
         super.init(map: map)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    required init() {
+        super.init()
+    }
+    
     override public func mapping(map: Map) {
         super.mapping(map: map)
         statusCode <- map["error.status"]
