@@ -372,7 +372,6 @@
 				5C627F2A1E2F14D50042D9BE /* Frameworks */,
 				5C627F2B1E2F14D50042D9BE /* Resources */,
 				EFA43CD47518AFB0D4DE7DDE /* [CP] Embed Pods Frameworks */,
-				9358BFC40ADFF8FACEA9AD81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -393,7 +392,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				917188EC069488F4497DB655 /* [CP] Embed Pods Frameworks */,
-				4A9D76725B4EA34EC7FD99EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -466,21 +464,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4A9D76725B4EA34EC7FD99EE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanExample/Pods-SpartanExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		917188EC069488F4497DB655 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -505,21 +488,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpartanExample/Pods-SpartanExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9358BFC40ADFF8FACEA9AD81 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B7E659C39AAB391EFAF8BA97 /* [CP] Check Pods Manifest.lock */ = {

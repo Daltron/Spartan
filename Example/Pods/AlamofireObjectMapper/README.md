@@ -90,12 +90,13 @@ class Forecast: Mappable {
 
 The extension uses Generics to allow you to create your own custom response objects. Below is the `responseObject` function definition. Just replace `T` in the completionHandler with your custom response object and the extension handles the rest: 
 ```swift
-public func responseObject<T: Mappable>(queue queue: dispatch_queue_t? = nil, keyPath: String? = nil, mapToObject object: T? = nil, completionHandler: DataResponse<T> -> Void) -> Self
+public func responseObject<T: BaseMappable>(queue: DispatchQueue? = nil, keyPath: String? = nil, mapToObject object: T? = nil, context: MapContext? = nil, completionHandler: @escaping (DataResponse<T>) -> Void) -> Self
 ```
-The `responseObject` function has 3 optional parameters and a required completionHandler:
+The `responseObject` function has 4 optional parameters and a required completionHandler:
 - `queue`: The queue on which the completion handler is dispatched.
-- `keyPath`: The key path of the JSON where object mapping should be performed
-- `mapToObject`: An object to perform the mapping on to
+- `keyPath`: The key path of the JSON where object mapping should be performed.
+- `mapToObject`: An object to perform the mapping on to.
+- `context`: A [context object](https://github.com/Hearst-DD/ObjectMapper/#mapping-context) that is passed to the mapping function.
 - `completionHandler`: A closure to be executed once the request has finished and the data has been mapped by ObjectMapper.
 
 ### Easy Mapping of Nested Objects
@@ -183,10 +184,10 @@ Alamofire.request(URL).responseArray { (response: DataResponse<[Forecast]>) in
 # Installation
 AlamofireObjectMapper can be added to your project using [CocoaPods](https://cocoapods.org/) by adding the following line to your Podfile:
 ```
-pod 'AlamofireObjectMapper', '~> 4.0'
+pod 'AlamofireObjectMapper', '~> 5.0'
 ```
 
 If you're using [Carthage](https://github.com/Carthage/Carthage) you can add a dependency on AlamofireObjectMapper by adding it to your Cartfile:
 ```
-github "tristanhimmelman/AlamofireObjectMapper" ~> 4.0
+github "tristanhimmelman/AlamofireObjectMapper" ~> 5.0
 ```
