@@ -34,5 +34,5 @@ Pod::Spec.new do |s|
   #   'Spartan' => ['Spartan/Assets/*.png']
   # }
 
-  s.dependency 'AlamoRecord', '~> 1.1.1'
+  s.dependency 'AlamoRecord', '~> 1.2.0'
 end
